@@ -1,0 +1,633 @@
+/*
+====================================================== 
+Styles of hero section
+====================================================== 
+*/
+
+.hero-section {
+  position: relative;
+  height: calc(100vh - 120px);
+}
+
+.panel img {
+  top: -100px;
+  left: 80px;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.subtitle {
+  width: 70%;
+}
+
+.hero-section .cta-btn {
+  margin-top: 14px;
+  width: fit-content;
+
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 0.01rem solid gray;
+  display: block;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.scroll-btn {
+  position: absolute;
+  bottom: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+/*
+====================================================== 
+Styles of company section
+====================================================== 
+*/
+
+.company-img {
+  overflow: hidden;
+}
+
+.company-img img {
+  height: 100%;
+  transform: translateY(var(--parallax, 0px));
+}
+
+.company-section > p {
+  max-width: 80%;
+  hyphens: auto;
+  text-align: justify;
+}
+/* End of styles of company section */
+
+/*
+====================================================== 
+Galery of hero section
+====================================================== 
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  grid-auto-rows: var(--row, 160px);
+  grid-auto-flow: dense;
+  margin-top: var(--margin-sm);
+  margin-bottom: 62px;
+}
+
+/* Tarjeta base: NADA de aspect-ratio */
+.item {
+  display: grid; /* clave */
+  grid-column: span 1;
+  grid-row: span 1;
+  overflow: hidden;
+  background: #ccc;
+}
+
+/* Tamaños */
+.item.wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.item.tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.item.big {
+  grid-column: span 2;
+  grid-row: span 2;
+} /* si la usas */
+
+/* Media ocupa toda la celda (¡solo este bloque!) */
+.item > img,
+.item > video {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: none;
+  max-height: none;
+  object-position: center;
+  transform: translateZ(0);
+}
+
+/* End styles of galery section*/
+
+/*
+====================================================== 
+Styles of testimonials section
+====================================================== 
+*/
+
+.testimonials-section {
+  padding: 0 24px;
+  height: auto;
+}
+
+.t-track {
+  display: grid;
+  grid-auto-flow: column;
+  gap: clamp(16px, 2.4vw, 32px);
+  will-change: transform;
+  margin-top: 42px;
+  /* ancho dinámico por JS */
+}
+
+/* Card testimonial (estética vcdesign) */
+.t-card {
+  width: 340px; /* clamp(260px, 44vw, 80vw);*/
+  border-left: 0.2px double #333333;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  padding: clamp(18px, 2.2vw, 28px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+}
+
+.t-card__brand {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.t-card__quote {
+  font-size: var(--fs-p-base);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.t-card__quote:before {
+  content: "“";
+  font-size: 1.4em;
+  line-height: 0;
+  margin-right: 0.04em;
+}
+
+.t-card__person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.t-card__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* End of styles of testimonials */
+
+/*
+====================================================== 
+Styles of services section
+====================================================== 
+*/
+
+.services-section .services-cards {
+  margin-top: 32px;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  gap: 24px;
+  z-index: 4;
+}
+
+.services-cards .service-card:not(:first-child) {
+  position: relative;
+  width: 100%;
+  padding: 3.5rem 0;
+  border-top: 0.5px solid var(--primary-color);
+}
+
+.services-cards .service-card:first-child {
+  padding: 0 0 3.5rem;
+  margin-top: 1.2rem;
+  border-top: none;
+}
+
+.service-card .service-card__title {
+  text-align: left;
+  width: 100%;
+  color: var(--primary-color);
+  font-size: var(--fs-p-md);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.service-card .service-card__desc {
+  position: relative;
+  font-size: var(--fs-p-base);
+  text-align: left;
+  max-width: 80%;
+  color: var(--color-heading);
+  font-size: var(--fs-p-base);
+  font-weight: 200;
+}
+
+.service-card .icon {
+  position: absolute;
+  display: block;
+  width: 220px;
+  height: 220px;
+  /* border: 1px solid red; */
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -20px;
+  right: 0.2vw;
+  opacity: 0; /* clave para no “gritar” */
+  z-index: 0;
+}
+
+.service-card .first_service_icon {
+  background-image: url("../images/icons/lifting.svg");
+  background-size: 200px;
+}
+
+.info-plus {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.service-card .service-1 {
+  aspect-ratio: 2 / 3;
+  width: 30vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/serv1.png");
+  z-index: 3;
+}
+
+.service-card .second_service_icon {
+  background-image: url("../images/icons/truck.svg");
+  background-size: 200px;
+}
+
+.service-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-size: var(--fs-p-base);
+  text-align: left;
+  width: 100%;
+  color: var(--primary-color);
+  font-size: var(--fs-p-base);
+  font-weight: 200;
+}
+
+.service-card .service-2 {
+  aspect-ratio: 2 / 3;
+  width: 30vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/serv1.png");
+  z-index: 3;
+}
+
+.service-card .third_service_icon {
+  background-image: url("../images/icons/packt.svg");
+  background-size: 200px;
+}
+
+.service-card .fourth_service_icon {
+  background-image: url("../images/icons/chair.svg");
+  background-size: 200px;
+}
+
+/* End of styles of services section */
+
+/*
+====================================================== 
+Styles of contact section
+====================================================== 
+*/
+
+.contact-information {
+  margin-top: 48px;
+  display: grid;
+  row-gap: 38px;
+  grid-template-columns: 1fr;
+  margin-bottom: 72px;
+  place-content: center;
+}
+
+.contact-information > div {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-information > div img {
+  width: 20px;
+  object-fit: contain;
+}
+
+.contact-information .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.contact-information .detail p:first-child {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.contact-information .detail p:last-child {
+  font-weight: 200;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 100%;
+}
+
+.social-networks > p {
+  font-weight: bold;
+  font-size: var(--fs-p-base);
+}
+
+.social-networks > div {
+  display: flex;
+  gap: 8px;
+}
+
+.social-networks img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+/* End of styles of Contact*/
+
+/*
+====================================================== 
+Styles of footer
+====================================================== 
+*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #2d3436;
+}
+
+footer p {
+  color: #d3d3d3;
+  font-size: var(--fs-p-sm);
+}
+
+/*
+====================================================== 
+Media Queries
+====================================================== 
+*/
+@media screen and (min-width: 576px) {
+  .galery {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*
+  ====================================================== 
+  Styles of hero section
+  ====================================================== 
+  */
+
+  .hero-section h1 {
+    font-size: var(--fs-h1-xl);
+  }
+
+  .hero-section > p {
+    font-size: var(--fs-p-md);
+    max-width: 100%;
+  }
+  /* End styles of hero section*/
+
+  /*
+  ====================================================== 
+  Styles of service section
+  ====================================================== 
+  */
+  .services-section .services-cards {
+    margin-top: 34px;
+  }
+
+  .services-section .services-cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .services-cards .service-card {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .service-card .icon {
+    grid-area: icon;
+    display: block;
+    align-self: center;
+    width: 120px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    position: absolute;
+    top: -60px;
+    right: 0;
+  }
+
+  .service-card .first_service_icon {
+    background-image: url("../images/icons/lifting.svg");
+    background-size: 60px;
+  }
+
+  .service-card .second_service_icon {
+    background-image: url("../images/icons/truck.svg");
+    background-size: 80px;
+  }
+
+  .service-card .third_service_icon {
+    background-image: url("../images/icons/packt.svg");
+    background-size: 50px;
+  }
+
+  .service-card .fourth_service_icon {
+    background-image: url("../images/icons/chair.svg");
+    background-size: 50px;
+  }
+
+  .service-card .service-card__desc {
+    width: 80%;
+  }
+  /* End of styles of services section*/
+
+  /* Styles of company section */
+  .company-section > p {
+    text-align: left;
+    line-height: 1.25;
+    /* color: #264653; */
+    color: #5a6066;
+  }
+  /* End of styles of company section*/
+
+  /* Styles of contact section */
+
+  .contact-section > h2 {
+    display: flex;
+    justify-content: left;
+    grid-area: title;
+  }
+
+  .contact-section > p {
+    max-width: 40%;
+  }
+
+  .social-networks {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .social-networks img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Galery section */
+
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    --row: 190px;
+  }
+
+  /* End of styles of contact section*/
+}
+
+@media screen and (min-width: 992px) {
+  /* Styles of service section */
+  .services-section .services-cards {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+
+  .service-card .service-card__desc {
+    width: 70%;
+    margin-bottom: 78px;
+  }
+
+  .service-card .icon {
+    width: 140px;
+    height: 100px;
+    top: -78px;
+    right: 16px;
+  }
+
+  .service-card .first_service_icon {
+    background-image: url("../images/icons/lifting.svg");
+    background-size: 90px;
+  }
+
+  .service-card .second_service_icon {
+    background-image: url("../images/icons/truck.svg");
+    background-size: 140px;
+  }
+
+  .service-card .third_service_icon {
+    background-image: url("../images/icons/packt.svg");
+    background-size: 90px;
+  }
+
+  .service-card .fourth_service_icon {
+    background-image: url("../images/icons/chair.svg");
+    background-size: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .company-section,
+  .galery-section,
+  .services-section,
+  .testimonials-section,
+  .contact-section {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .hero-section h1 {
+    margin-bottom: 30px; /* Espacio abajo */
+  }
+
+  .galery-section > h2,
+  .company-section > h2 {
+    max-width: 84%;
+    margin: 0 0 14px;
+  }
+
+  .galery-section > h2 {
+    margin-bottom: 64px;
+  }
+
+  .company-section > p {
+    max-width: 60%;
+    hyphens: auto;
+    text-align: justify;
+    font-size: var(--fs-p-lg);
+  }
+
+  .galery {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .galery .first-img {
+    background-image: url("../images/left-one.webp");
+  }
+
+  .galery .second-img {
+    background-image: url("../images/left-two.webp");
+  }
+
+  .galery .third-img {
+    background-image: url("../images/top-one.webp");
+  }
+
+  .galery .fourth-img {
+    background-image: url("../images/center.webp");
+  }
+
+  .galery .fifth-img {
+    background-image: url("../images/top-two.webp");
+  }
+
+  .galery .sixth-img {
+    background-image: url("../images/buttom-one.webp");
+  }
+
+  .galery .seventh-img {
+    background-image: url("../images/buttom-two.webp");
+  }
+}

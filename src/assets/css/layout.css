@@ -1,0 +1,63 @@
+/*
+====================================================== 
+Layout of main
+====================================================== 
+*/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+/*
+====================================================== 
+Layout of sections
+====================================================== 
+*/
+.hero-section,
+.company-section,
+.galery-section,
+.services-section,
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-sm) 0;
+}
+
+/*
+====================================================== 
+Space top between top sections and h2
+====================================================== 
+*/
+
+@media screen and (min-width: 768px) {
+  /*
+  ====================================================== 
+  Layout of sections
+  ====================================================== 
+  */
+
+  .company-section,
+  .galery-section,
+  .services-section,
+  .contact-section {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*
+  ====================================================== 
+  Layout of sections
+  ====================================================== 
+  */
+  .hero-section,
+  .company-section,
+  .galery-section,
+  .services-section,
+  .contact-section {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}

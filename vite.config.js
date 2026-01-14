@@ -1,0 +1,21 @@
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  root: "src",
+
+  build: {
+    manifest: true,
+    outDir: "../_site",
+    emptyOutDir: false, //
+    rollupOptions: {
+      input: {
+        main: "/assets/js/main.js",
+      },
+      output: {
+        entryFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        assetFileNames: "assets/[ext]/[name]-[hash][extname]",
+      },
+    },
+  },
+});

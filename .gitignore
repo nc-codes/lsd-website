@@ -5,3 +5,10 @@
 /logs
 *.log
 /coverage    
+dist/              
+.env
+.env.*
+.cache/
+ dist/               
+ .vscode/ 
+ _site/

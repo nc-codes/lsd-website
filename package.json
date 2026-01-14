@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eleventy": "eleventy --serve",
+    "vite": "vite",
+    "dev": "concurrently \"npm run eleventy\" \"npm run vite\"",
+    "build": "eleventy && vite build"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +15,11 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "gsap": "^3.14.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^6.4.1"
   }
 }

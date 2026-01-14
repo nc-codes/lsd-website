@@ -1,0 +1,311 @@
+/*
+====================================================== 
+Variables
+====================================================== 
+*/
+
+:root {
+  --primary-color: #27334b;
+  --white-color: #ffffff;
+  --black-color: #000;
+  --primary-bg: #dce0df;
+  --border-radius-xs: 8px;
+  --margin-xs: 8px;
+  --margin-sm: 32px;
+  --margin-md: 48px;
+  --header-height: 48px;
+  --color-heading: #4c3c2c;
+  --color-paragraph: #4e4e4e;
+  --bg-body: #f5f3e5;
+  --top-bar-height: 34px;
+  --padding-sm: 24px;
+
+  --fs-h1-sm: clamp(1.2rem, 0.03vi + 1.19rem, 1.22rem);
+  --fs-h1-base: clamp(1.5rem, 0.23vi + 1.44rem, 1.63rem);
+  --fs-h1-md: clamp(1.88rem, 0.53vi + 1.74rem, 2.17rem);
+  --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
+  --fs-h1-xl: clamp(2.93rem, 1.67vi + 2.51rem, 3.85rem);
+  --fs-h1-xxl: clamp(3.66rem, 2.67vi + 2.99rem, 5.13rem);
+  --fs-h1-xxxl: clamp(4.58rem, 4.11vi + 3.55rem, 6.84rem);
+
+  --fs-h2-sm: clamp(1rem, 0.23vi + 0.94rem, 1.13rem);
+  --fs-h2-base: clamp(1.25rem, 0.45vi + 1.14rem, 1.5rem);
+  --fs-h2-md: clamp(1.56rem, 0.79vi + 1.36rem, 2rem);
+  --fs-h2-lg: clamp(1.95rem, 1.29vi + 1.63rem, 2.67rem);
+  --fs-h2-xl: clamp(2.44rem, 2.02vi + 1.94rem, 3.55rem);
+  --fs-h2-xxl: clamp(3.05rem, 3.06vi + 2.29rem, 4.74rem);
+  --fs-h2-xxxl: clamp(3.81rem, 4.54vi + 2.68rem, 6.31rem);
+
+  --fs-h4-sm: clamp(0.14rem, 0.97vi + -0.1rem, 0.75rem);
+  --fs-h4-base: clamp(0.75rem, 0.4vi + 0.65rem, 1rem);
+  --fs-h4-md: clamp(3.94rem, -4.17vi + 4.98rem, 1.33rem);
+  --fs-h4-lg: clamp(20.67rem, -30.23vi + 28.23rem, 1.78rem);
+  --fs-h4-xl: clamp(108.53rem, -169.85vi + 150.99rem, 2.37rem);
+  --fs-h4-xxl: clamp(569.77rem, -906.58vi + 796.41rem, 3.16rem);
+  --fs-h4-xxxl: clamp(2991.28rem, -4779.32vi + 4186.12rem, 4.21rem);
+
+  --fs-p-sm: clamp(0.8rem, -0.04vi + 0.81rem, 0.77rem);
+  --fs-p-base: clamp(1rem, 0.05vi + 0.99rem, 1.03rem);
+  --fs-p-md: clamp(1.25rem, 0.2vi + 1.2rem, 1.37rem);
+  --fs-p-lg: clamp(1.56rem, 0.43vi + 1.45rem, 1.83rem);
+  --fs-p-xl: clamp(1.95rem, 0.78vi + 1.76rem, 2.44rem);
+  --fs-p-xxl: clamp(2.44rem, 1.3vi + 2.12rem, 3.26rem);
+  --fs-p-xxxl: clamp(3.05rem, 2.06vi + 2.54rem, 4.34rem);
+
+  /*
+  --fs-h1: clamp(1.2rem, 4vw, 6.84rem);
+  --fs-h2: clamp(1.8rem, 3vw, 3rem);
+  --fs-h3: clamp(1.4rem, 2vw, 2.2rem);
+  --fs-h4: clamp(0.875rem, 0.9vw + 0.6rem, 1.25rem);
+  --fs-p: clamp(1rem, 0.5vw + 0.9rem, 1.2rem);
+
+  */
+}
+
+/*
+====================================================== 
+Global Styles
+====================================================== 
+*/
+
+body {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--bg-body);
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/*
+====================================================== 
+H1 - H6 Headings
+====================================================== 
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-weight: 300;
+}
+
+/*
+====================================================== 
+Paragraph of sections
+====================================================== 
+*/
+
+p {
+  color: var(--color-paragraph);
+}
+
+/*
+====================================================== 
+Eyebrow of sections
+====================================================== 
+*/
+
+.eyebrow {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: var(--fs-p-sm);
+}
+
+/*
+====================================================== 
+H2 heading sections
+====================================================== 
+*/
+h2 {
+  font-size: var(--fs-h2-md);
+  font-weight: 400;
+}
+
+/*
+====================================================== 
+Paragraph of sections
+====================================================== 
+*/
+
+.services-section > p,
+.company-section > p,
+.testimonials-section > p,
+.contact-section > p {
+  font-size: var(--fs-p-base);
+  font-weight: 200;
+}
+
+/*
+====================================================== 
+Hidden class
+====================================================== 
+*/
+
+/*
+====================================================== 
+Flex Class
+====================================================== 
+*/
+.d-flex {
+  display: flex;
+}
+
+/*
+====================================================== 
+Media Queries
+====================================================== 
+*/
+
+@media screen and (min-width: 768px) {
+  /*
+  ====================================================== 
+  Font size of h2 heading sections
+  ====================================================== 
+  */
+
+  .services-section > h2,
+  .company-section > h2,
+  .testimonials-section > h2,
+  .contact-section > h2 {
+    font-size: var(--fs-h2-md);
+  }
+
+  /*
+  ====================================================== 
+  Font size of paragraph sections
+  ====================================================== 
+  */
+
+  .hero-section > p,
+  .services-section > p,
+  .company-section > p,
+  .testimonials-section > p,
+  .contact-section > p {
+    font-size: var(--fs-p-md);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*
+  ====================================================== 
+  Font size of h1 heading sections
+  ====================================================== 
+  */
+  .hero-section h1 {
+    font-size: var(--fs-h1-lg);
+  }
+
+  /*
+  ====================================================== 
+  Font size of h2 heading sections
+  ====================================================== 
+  */
+  .company-section > h2,
+  .galery-section > h2,
+  .services-section > h2,
+  .testimonials-section > h2,
+  .contact-section > h2 {
+    font-size: var(--fs-h2-lg);
+  }
+
+  /*
+  ====================================================== 
+  Font size of paragraph sections
+  ====================================================== 
+  */
+  .hero-section > p,
+  .services-section > p,
+  .company-section > p,
+  .testimonials-section > p,
+  .contact-section > p {
+    font-size: var(--fs-p-lg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section h1 {
+    font-size: var(--fs-h1-xl);
+  }
+
+  .company-section > h2,
+  .galery-section > h2,
+  .services-section > h2,
+  .testimonials-section > h2,
+  .contact-section > h2 {
+    font-size: clamp(28px, 5vw, 64px);
+  }
+
+  .company-section > p {
+    max-width: 60%;
+    hyphens: auto;
+    text-align: justify;
+    font-size: var(--fs-p-lg);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero-section h1 {
+    font-size: var(--fs-h1-xxl);
+  }
+
+  .services-section > h2,
+  .company-section > h2,
+  .testimonials-section > h2,
+  .contact-section > h2 {
+    font-size: var(--fs-h2-xxl);
+  }
+
+  .hero-section .btn {
+    font-size: var(--fs-p-xl);
+  }
+
+  .hero-section > p,
+  .services-section > p,
+  .company-section > p,
+  .testimonials-section > p,
+  .contact-section > p {
+    font-size: var(--fs-p-xxl);
+  }
+}
+/* End of Global Styles */

@@ -1,0 +1,74 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="content-language" content="{{ t.locale }}" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0 viewport-fit=cover"
+  />
+
+  <title>{{ t.pages[pageKey].title }}</title>
+  <meta name="description" content="{{ t.pages[pageKey].description }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ t.pages[pageKey].title }}" />
+  <meta
+    property="og:description"
+    content="{{ t.pages[pageKey].description }}"
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Lift Service Déménagement" />
+
+  <!-- Canonical -->
+
+  <link
+    rel="canonical"
+    href="https://www.liftservicebel.com{{ t.routes[pageKey] }}"
+  />
+
+  <link
+    rel="alternate"
+    hreflang="fr-be"
+    href="https://www.liftservicebel.com{{ t.routes[pageKey] }}"
+  />
+
+  <link
+    rel="alternate"
+    hreflang="es-es"
+    href="https://www.liftservicebel.com{{ i18n.es.routes[pageKey] }}"
+  />
+  <link
+    rel="alternate"
+    hreflang="en-gb"
+    href="https://www.liftservicebel.com{{ i18n.en.routes[pageKey] }}"
+  />
+
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href="https://www.liftservicebel.com{{ t.routes[pageKey] }}"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="assets/images/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/images/favicon/favicon-32x32.png"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/normalize.css" />
+  <link rel="stylesheet" href="/assets/css/font-family.css" />
+  <link rel="stylesheet" href="/assets/css/global.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/menu.css" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+
+  <!-- JS -->
+</head>

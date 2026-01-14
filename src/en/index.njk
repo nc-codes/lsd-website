@@ -1,0 +1,234 @@
+---
+layout: layouts/base.njk
+lang: en
+pageKey: home
+---
+
+<!-- Start Hero section -->
+{% set t = i18n[lang] %}
+<section id="hero" class="hero-section">
+  <h1 class="heading">
+    <span class="static">{{ t.section.hero.heading }} </span>
+    <br />
+    <span class="word">{{ t.section.hero.headingc }} </span>
+  </h1>
+  <p class="subtitle">
+    We make your move a
+    <span class="highlight">pleasant experience</span>
+  </p>
+  <a class="btn" href="#services">View services</a>
+</section>
+
+<!-- Start company section -->
+<section id="company" class="company-section">
+  <!-- <div class="company-img">
+          <img src="../images/company.png" alt="Company" />
+        </div> -->
+  <div class="eyebrow">About us</div>
+  <h2 class="reveal-type">Over ten years of simplifying removals.</h2>
+  <p class="reveal-type">
+    We ensure that every move is efficient, safe and stress-free, always
+    adapting to the specific needs of our customers.
+  </p>
+  <p class="reveal-type">
+    The trust and satisfaction of those who have placed their confidence in us
+    reflect our unwavering commitment to excellence in everything we do.
+  </p>
+</section>
+<!-- End of hero section -->
+<section id="galery" class="galery-section">
+  <div class="eyebrow">Our work</div>
+  <h2>Professional managed relocation.</h2>
+  <div class="overlay"></div>
+  <div id="galery-grid" class="grid">
+    <!-- Distribución exacta de 20 ítems para 3 y 4 columnas sin dejar espacios -->
+    <div class="item small">
+      <img src="assets/images/img-1.webp" alt="" />
+    </div>
+    <div class="item">
+      <img src="assets/images/img-2.webp" alt="" />
+    </div>
+
+    <div class="item">
+      <img src="assets/images/img-4.webp" alt="" />
+    </div>
+  </div>
+</section>
+<!-- End company section -->
+<!-- Start testimonial section -->
+<section class="testimonials-section" id="testimonials">
+  <div class="eyebrow">Testimonials</div>
+  <h2>Your satisfaction is our mission</h2>
+  <div class="testimonials__pin">
+    <!-- Track horizontal (cards) -->
+    <div class="t-track-wrap">
+      <div class="t-track" id="tTrack">
+        <!-- Card 1 -->
+        <article class="t-card">
+          <div class="t-card__brand">Barclays — Rise</div>
+          <p class="t-card__quote">
+            Very reliable company. Professional, attentive, punctual and
+            courteous staff. Easy communication via WhatsApp and email. I
+            recommend them!
+          </p>
+          <div class="t-card__person">
+            <img
+              class="t-card__avatar"
+              src="https://i.pravatar.cc/80?img=12"
+              alt=""
+            />
+            <div>
+              <strong>Moni Di Bratto</strong><br /><span>Google user</span>
+            </div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="t-card">
+          <div class="t-card__brand">Argyle</div>
+          <p class="t-card__quote">
+            Punctual, organised, efficient and, as a bonus, friendly and
+            cheerful! What more could you ask for? Professionalism, friendliness
+            and efficiency. Highly recommended!
+          </p>
+          <div class="t-card__person">
+            <img
+              class="t-card__avatar"
+              src="https://i.pravatar.cc/80?img=21"
+              alt=""
+            />
+            <div>
+              <strong>Giovanna Rollo</strong><br /><span
+                >Utilisateur Pagesd'or</span
+              >
+            </div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="t-card">
+          <div class="t-card__brand">Stellar Security</div>
+          <p class="t-card__quote">
+            Very responsive and professional. Treated my goods with good care
+            and worked very quickly. They speak several languages. Absolutely
+            recommend.
+          </p>
+          <div class="t-card__person">
+            <img
+              class="t-card__avatar"
+              src="https://i.pravatar.cc/80?img=15"
+              alt=""
+            />
+            <div>
+              <strong>Luz Rey</strong><br /><span>Utilisateur Google</span>
+            </div>
+          </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="t-card">
+          <div class="t-card__brand">Rollpark</div>
+          <p class="t-card__quote">
+            Very professional, they remind one about the appointment a day
+            before, communication is excellent and fast. They also help during
+            the move and are very friendly.
+          </p>
+          <div class="t-card__person">
+            <img
+              class="t-card__avatar"
+              src="https://i.pravatar.cc/80?img=5"
+              alt=""
+            />
+            <div>
+              <strong>Roberto Gelsomino</strong><br /><span
+                >Head of Growth</span
+              >
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End testimonials section-->
+<!-- Start services section -->
+<section id="services" class="services-section">
+  <div class="eyebrow">Our services</div>
+  <h2>Tailored to you, designed for you</h2>
+  <div id="services-cards" class="services-cards">
+    <div id="first-service" class="service-card">
+      <p class="service-card__title">Furniture lift hire.</p>
+      <p class="service-card__desc">The effective solution for heavy loads.</p>
+    </div>
+    <div id="second-service" class="service-card">
+      <p class="service-card__title">Camions équipés + chauffeur</p>
+      <p class="service-card__desc">Pour un transport sûr et pratique.</p>
+    </div>
+    <div id="third-service" class="service-card">
+      <p class="service-card__title">Customised removals.</p>
+      <p class="service-card__desc">Designed to suit your situation.</p>
+    </div>
+    <div class="service-card">
+      <p class="service-card__title">Moving supplies</p>
+      <p class="service-card__desc">
+        Boxes, straps and protective covers for home use.
+      </p>
+      <!-- <div class="icon fourth_service_icon"></div> -->
+    </div>
+  </div>
+</section>
+<!-- End services section -->
+<!-- Start contact section -->
+<section id="contact" class="contact-section">
+  <div class="eyebrow">Contact</div>
+  <h2>Begin your move</h2>
+  <div class="contact-information">
+    <div>
+      <img src="assets/images/icons/phone.svg" alt="icône du téléphone" />
+      <a
+        class="detail"
+        href="https://wa.link/c4viwy"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <p>Phone</p>
+        <p>(+32) 479482771</p>
+      </a>
+    </div>
+    <div>
+      <img src="assets/images/icons/mail.svg" alt="icône google" />
+      <a class="detail" href="mailto:liftservice@gmail.com">
+        <p>Email</p>
+        <p>liftservicebel@gmail.com</p>
+      </a>
+    </div>
+    <div>
+      <img src="assets/images/icons/location.svg" alt="icône de localisation" />
+      <a
+        class="detail"
+        href="https://rb.gy/q6apwy"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <p>Address</p>
+        <p>Av. Wielemans Ceuppens 158-1190 Forest</p>
+      </a>
+    </div>
+  </div>
+  <div class="social-networks">
+    <p>Follow us on</p>
+    <div>
+      <a
+        href="https://www.tiktok.com/@nunezassocies"
+        rel="noopener noreferrer"
+        target="_blank"
+        ><img src="assets/images/icons/tiktok.svg" alt="icône tiktok"
+      /></a>
+      <a
+        href="https://www.instagram.com/ivanliftservice/?utm_source=qr&igsh=bTQwaTBnYnBiZXY5"
+        rel="noopener noreferrer"
+        target="_blank"
+        ><img src="assets/images/icons/instagram4.svg" alt="icône instagram"
+      /></a>
+    </div>
+  </div>
+</section>
+<!-- End contact section -->
