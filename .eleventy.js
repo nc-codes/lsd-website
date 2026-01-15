@@ -7,6 +7,7 @@ export default function (eleventyConfig) {
       if (!path.includes("js")) return path;
     },
   });
+
   eleventyConfig.addShortcode("vite", function (entry) {
     const isDev = process.env.ELEVENTY_ENV === "development";
     const manifestPath = path.resolve("_site/manifest.json");
