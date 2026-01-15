@@ -10,5 +10,5 @@ dist/
 .env.*
 .cache/
  dist/               
- .vscode/ 
- _site/
+ .vsco  de/ 
+ _site

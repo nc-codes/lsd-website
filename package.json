@@ -7,7 +7,7 @@
     "eleventy": "eleventy --serve",
     "vite": "vite",
     "dev": "concurrently \"npm run eleventy\" \"npm run vite\"",
-    "build": "eleventy && vite build"
+    "build": "vite build && eleventy"
   },
   "keywords": [],
   "author": "",

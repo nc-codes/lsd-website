@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     manifest: true,
     outDir: "../_site",
-    emptyOutDir: false, //
+    emptyOutDir: false,
     rollupOptions: {
       input: {
         main: "/assets/js/main.js",
