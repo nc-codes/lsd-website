@@ -11,4 +11,5 @@ dist/
 .cache/
  dist/               
  .vsco  de/ 
- _site
+ _site/
+ 

@@ -7,16 +7,14 @@ export default function (eleventyConfig) {
       if (!path.includes("js")) return path;
     },
   });
-
   eleventyConfig.addShortcode("vite", function (entry) {
+    const isDev = process.env.ELEVENTY_ENV === "development";
     const manifestPath = path.resolve("_site/manifest.json");
 
-    // Desarrollo (Vite dev server)
-    if (process.env.NODE_ENV !== "production") {
+    if (isDev) {
       return `<script type="module" src="http://localhost:5173/${entry}"></script>`;
     }
 
-    // Producción
     if (!fs.existsSync(manifestPath)) {
       throw new Error("Vite manifest not found. Did you run `vite build`?");
     }
