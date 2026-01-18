@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eleventy": "eleventy --serve",
     "vite": "vite",
-    "dev": "cross-env ELEVENTY_ENV=development concurrently \"npm run eleventy\" \"npm run vite\"",
+    "dev": "cross-env ELEVENTY_ENV=development concurrently \"eleventy --serve\" \"vite\"",
     "build": "cross-env ELEVENTY_ENV=production vite build && eleventy"
   },
   "keywords": [],

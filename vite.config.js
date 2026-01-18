@@ -2,10 +2,10 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: "src",
-
+  base: "/",
   build: {
     manifest: true,
-    outDir: "../_site",
+    outDir: "../public",
     emptyOutDir: false,
     rollupOptions: {
       input: {
