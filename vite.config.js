@@ -6,16 +6,9 @@ export default defineConfig({
   build: {
     manifest: true,
     outDir: "../dist",
-    emptyOutDir: false,
+    emptyOutDir: true,
     rollupOptions: {
-      input: {
-        main: "/assets/js/main.js",
-      },
-      output: {
-        entryFileNames: "assets/js/[name]-[hash].js",
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        assetFileNames: "assets/[ext]/[name]-[hash][extname]",
-      },
+      input: "/assets/js/main.js",
     },
   },
 });

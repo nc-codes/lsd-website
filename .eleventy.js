@@ -2,12 +2,17 @@ import fs from "fs";
 import path from "path";
 
 export default function (eleventyConfig) {
+  // Copiar assets NO-JS (imágenes, fuentes, etc.)
   eleventyConfig.addPassthroughCopy("src/assets", {
-    filter: (path) => {
-      if (!path.includes("js")) return path;
-    },
+    filter: (p) => !p.includes("/js/"),
   });
 
+  // Copiar SOLO los assets procesados por Vite
+  eleventyConfig.addPassthroughCopy({
+    "dist/assets": "assets",
+  });
+
+  // Shortcode Vite
   eleventyConfig.addShortcode("vite", function (entry) {
     const isDev = process.env.ELEVENTY_ENV === "development";
     const manifestPath = path.join(process.cwd(), "dist", "manifest.json");
@@ -16,31 +21,20 @@ export default function (eleventyConfig) {
       return `<script type="module" src="http://localhost:5173/${entry}"></script>`;
     }
 
-    if (!fs.existsSync(manifestPath)) {
-      console.warn("⚠️ Vite manifest not found, skipping script:", entry);
-      return "";
-    }
+    if (!fs.existsSync(manifestPath)) return "";
 
     const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
     const file = manifest[entry];
-
-    if (!file) {
-      console.warn(`⚠️ Entry "${entry}" not found in manifest`);
-      return "";
-    }
+    if (!file) return "";
 
     return `<script type="module" src="/${file.file}"></script>`;
-  });
-
-  eleventyConfig.addPassthroughCopy({
-    "dist/assets": "assets",
   });
 
   return {
     dir: {
       input: "src",
-      includes: "_includes",
       output: "_site",
+      includes: "_includes",
     },
   };
 }
