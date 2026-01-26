@@ -7,6 +7,7 @@ export default defineConfig({
     manifest: true,
     outDir: "../dist",
     emptyOutDir: true,
+    assetsDir: "assets/js",
     rollupOptions: {
       input: "/assets/js/main.js",
     },

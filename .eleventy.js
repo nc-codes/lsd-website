@@ -2,8 +2,6 @@ import fs from "fs";
 import path from "path";
 import "dotenv/config";
 
-console.log("NODE_ENV:", process.env.NODE_ENV);
-
 export default function (eleventyConfig) {
   // Copiar assets NO-JS (imágenes, fuentes, etc.)
   eleventyConfig.addPassthroughCopy("src/assets", {
@@ -11,9 +9,7 @@ export default function (eleventyConfig) {
   });
 
   // Copiar SOLO los assets procesados por Vite
-  eleventyConfig.addPassthroughCopy({
-    "dist/assets": "assets",
-  });
+  eleventyConfig.addPassthroughCopy("dist/assets");
 
   // Shortcode Vite
   eleventyConfig.addShortcode("vite", function (entry) {
