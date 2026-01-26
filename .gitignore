@@ -13,3 +13,5 @@ dist/
  .vsco  de/ 
  _site/
  
+ # Eleventy build output
+_site/
