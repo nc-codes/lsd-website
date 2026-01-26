@@ -12,7 +12,7 @@ export default function (eleventyConfig) {
 
   // Copiar SOLO los assets procesados por Vite
   eleventyConfig.addPassthroughCopy({
-    "dist/assets": "assets/js",
+    "dist/assets": "assets",
   });
 
   // Shortcode Vite
