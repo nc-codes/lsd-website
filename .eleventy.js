@@ -7,12 +7,12 @@ console.log("NODE_ENV:", process.env.NODE_ENV);
 export default function (eleventyConfig) {
   // Copiar assets NO-JS (imágenes, fuentes, etc.)
   eleventyConfig.addPassthroughCopy("src/assets", {
-    filter: (p) => !p.includes("/js/"),
+    filter: (p) => !p.includes("js"),
   });
 
   // Copiar SOLO los assets procesados por Vite
   eleventyConfig.addPassthroughCopy({
-    "dist/assets": "assets",
+    "dist/assets": "assets/js",
   });
 
   // Shortcode Vite
