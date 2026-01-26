@@ -15,4 +15,5 @@ dist/
  
  # Eleventy build output
 _site/
-public/
+
+dist/

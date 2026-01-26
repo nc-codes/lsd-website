@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addShortcode("vite", function (entry) {
     const isDev = process.env.ELEVENTY_ENV === "development";
-    const manifestPath = path.join(process.cwd(), "public", "manifest.json");
+    const manifestPath = path.join(process.cwd(), "dist", "manifest.json");
 
     if (isDev) {
       return `<script type="module" src="http://localhost:5173/${entry}"></script>`;
@@ -30,10 +30,6 @@ export default function (eleventyConfig) {
     }
 
     return `<script type="module" src="/${file.file}"></script>`;
-  });
-
-  eleventyConfig.addPassthroughCopy({
-    public: "/",
   });
 
   return {

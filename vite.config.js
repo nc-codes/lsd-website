@@ -5,7 +5,7 @@ export default defineConfig({
   base: "/",
   build: {
     manifest: true,
-    outDir: "../public",
+    outDir: "../dist",
     emptyOutDir: false,
     rollupOptions: {
       input: {
