@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import "dotenv/config";
 
 export default function (eleventyConfig) {
   // Copiar assets NO-JS (imágenes, fuentes, etc.)
