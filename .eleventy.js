@@ -32,7 +32,9 @@ export default function (eleventyConfig) {
     return `<script type="module" src="/${file.file}"></script>`;
   });
 
-  eleventyConfig.addPassthroughCopy("public/");
+  eleventyConfig.addPassthroughCopy({
+    public: "/",
+  });
 
   return {
     dir: {
