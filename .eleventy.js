@@ -32,6 +32,10 @@ export default function (eleventyConfig) {
     return `<script type="module" src="/${file.file}"></script>`;
   });
 
+  eleventyConfig.addPassthroughCopy({
+    "dist/assets": "assets",
+  });
+
   return {
     dir: {
       input: "src",
