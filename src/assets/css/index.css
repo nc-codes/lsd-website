@@ -5,13 +5,11 @@ Styles of hero section
 */
 
 .hero-section {
-  position: relative;
   padding: 0;
   /* padding-bottom: 1rem; */
   gap: 2rem;
   flex-direction: column;
   margin-bottom: 15rem;
-  border: 1px solid red;
 }
 
 /* Networks*/
@@ -78,14 +76,15 @@ Styles of hero section
   width: 100%;
   padding: 0 24px;
   text-align: justify;
-  border: 1px solid red;
+  z-index: 2;
 }
 
 .hero-section .copy .heading {
   font-size: clamp(1.5rem, 2rem, 5rem);
-  border: 1px solid black;
+  padding-top: 100px;
   text-transform: uppercase;
   line-height: 0.9;
+  position: relative;
   font-family: "Syne";
   line-height: 0.8;
   transform: scale(1, 1.5);
@@ -102,6 +101,7 @@ Styles of hero section
 .heading .highlight {
   font-style: italic;
   font-weight: 500;
+  position: relative;
 }
 
 .heading .comma {
