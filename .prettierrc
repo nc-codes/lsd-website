@@ -1,0 +1,13 @@
+{
+  "printWidth": 80,
+  "singleQuote": false,
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.njk",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}

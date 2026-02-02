@@ -6,34 +6,204 @@ Styles of hero section
 
 .hero-section {
   position: relative;
-  height: calc(100vh - 120px);
+  padding: 0;
+  /* padding-bottom: 1rem; */
+  gap: 2rem;
+  flex-direction: column;
+  margin-bottom: 15rem;
 }
 
-.panel img {
-  top: -100px;
-  left: 80px;
-  position: relative;
+/* Networks*/
+.hero-section .networks {
+  display: none; /*flex*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 1px solid rgba(39, 51, 75, 0.05);
+  height: 100vh;
+  padding-top: 80px;
+  width: 80px;
+  color: var(--color-heading);
+}
+
+.language .line-wrapper {
+  pointer-events: none;
+  height: 10px;
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.language p {
+  color: var(--primary-color);
+  opacity: 1;
+  font-size: 0.6rem;
+}
+
+.vertical-line {
+  height: 40px;
+}
+
+.hero-section .networks a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-section .networks img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+.social {
+  display: flex;
+  height: 60%;
+  justify-content: space-between;
+  writing-mode: sideways-lr;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  opacity: 0.4;
+}
+
+/* Copy */
+.hero-section .copy {
   width: 100%;
-  height: 450px;
+  padding: 0 24px;
+  text-align: justify;
+  z-index: 2;
+}
+
+.hero-section .copy .heading {
+  font-size: clamp(1.5rem, 2rem, 5rem);
+  padding-top: 100px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  position: relative;
+  font-family: "Syne";
+  line-height: 0.8;
+  transform: scale(1, 1.5);
+  width: 100%;
+  /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
+  /* color: var(--bg-body); */
+}
+
+.heading .static {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.heading .highlight {
+  font-style: italic;
+  font-weight: 500;
+  position: relative;
+}
+
+.heading .comma {
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.15;
+}
+
+.comma svg {
+  fill: #27334b; /* tu color base */
+}
+
+.copy .sub-heading {
+  width: 100%;
+  margin-top: 3.2rem;
+  font-size: 2.2em;
+  text-align: left;
+  font-family: "Cormorant-Garamond", Times, serif;
+  width: 100%;
+  font-weight: 600;
+  font-style: italic;
+  /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
+  /* color: var(--bg-body); */
+}
+
+.container-hero-img {
+  /* flex: 1; */
+  width: 60%;
+  height: clamp(24rem, 2rem, 20rem);
+  position: absolute;
+  bottom: 0;
+  transform: translate(50%, 60%);
+  /* opacity: 0.9; */
+
+  /* mask-image: linear-gradient(black 40%, transparent); */
+
+  border-top-left-radius: 4rem;
+  border-end-end-radius: 4rem;
   object-fit: cover;
+  background-image: url("../images/img-15.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(20%);
+  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+}
+
+.container-hero-img > .opt {
+  position: relative;
+  width: 60px;
+  height: 60px;
   border-radius: 5px;
+  bottom: 10px;
 }
 
 .subtitle {
   width: 70%;
 }
 
-.hero-section .cta-btn {
-  margin-top: 14px;
-  width: fit-content;
+.hero-section .images {
+  width: 100%;
+  height: 240px;
+}
 
-  border-radius: 5px;
-  padding: 0.5rem;
-  border: 0.01rem solid gray;
-  display: block;
+.cta-hero {
+  z-index: 2;
+  margin: 0 24px;
+  margin-top: 7rem;
+  width: 15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  justify-content: end;
+  position: relative;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1rem 1rem;
+  background-color: #4a4a4a;
+  height: min-content;
+  text-align: left;
   font-size: 0.8rem;
-  color: var(--primary-color);
+
+  border-radius: 2px;
   font-weight: 400;
+  cursor: pointer;
+}
+
+.cta-btn img {
+  margin-left: 0.4rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cta-btn p {
+  color: #f5f3e5;
 }
 
 .scroll-btn {
@@ -48,13 +218,39 @@ Styles of company section
 ====================================================== 
 */
 
-.company-img {
-  overflow: hidden;
+.company-section {
+  padding-top: 6rem;
+}
+
+.company-section .cta-btn {
+  margin-top: 24px;
+}
+
+.cta-btn .arrow {
+  height: 18px;
+  width: 18px;
+  color: var(--bg-body);
+}
+
+.cta-btn p {
+  padding-left: 8px;
+}
+
+.cta-company {
+  width: 15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  position: relative;
 }
 
 .company-img img {
   height: 100%;
   transform: translateY(var(--parallax, 0px));
+}
+
+.company-section h2 {
+  margin-bottom: 1rem;
 }
 
 .company-section > p {
@@ -69,55 +265,40 @@ Styles of company section
 Galery of hero section
 ====================================================== 
 */
+/**/
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem;
-  grid-auto-rows: var(--row, 160px);
-  grid-auto-flow: dense;
-  margin-top: var(--margin-sm);
-  margin-bottom: 62px;
+/* ===== SECTION ===== */
+.galery-section {
+  padding: 8rem 0;
+  background: #f4f1e8;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
 }
 
-/* Tarjeta base: NADA de aspect-ratio */
-.item {
-  display: grid; /* clave */
-  grid-column: span 1;
-  grid-row: span 1;
-  overflow: hidden;
-  background: #ccc;
+/* ===== ROWS ===== */
+.row {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
 }
 
-/* Tamaños */
-.item.wide {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.item.tall {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.item.big {
-  grid-column: span 2;
-  grid-row: span 2;
-} /* si la usas */
-
-/* Media ocupa toda la celda (¡solo este bloque!) */
-.item > img,
-.item > video {
-  grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
+.row img {
+  width: 180px;
+  height: 140px;
   object-fit: cover;
-  display: block;
-  max-width: none;
-  max-height: none;
-  object-position: center;
-  transform: translateZ(0);
+  border-radius: 8px;
 }
+
+.row-top {
+  transform: translateX(-350px);
+}
+
+.row-bottom {
+  transform: translateX(40px);
+}
+
+/**/
 
 /* End styles of galery section*/
 
@@ -130,6 +311,7 @@ Styles of testimonials section
 .testimonials-section {
   padding: 0 24px;
   height: auto;
+  margin-bottom: 10rem;
 }
 
 .t-track {
@@ -196,6 +378,9 @@ Styles of services section
 ====================================================== 
 */
 
+.services-section {
+  margin-bottom: 8rem;
+}
 .services-section .services-cards {
   margin-top: 32px;
   width: 100%;
@@ -315,6 +500,10 @@ Styles of services section
 Styles of contact section
 ====================================================== 
 */
+
+.contact-section {
+  margin-bottom: 4rem;
+}
 
 .contact-information {
   margin-top: 48px;

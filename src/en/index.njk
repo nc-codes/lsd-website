@@ -4,44 +4,66 @@ lang: en
 pageKey: home
 ---
 
-<!-- Start Hero section -->
 {% set t = i18n[lang] %}
+
+<!-- Start Hero section -->
 <section id="hero" class="hero-section">
-  <h1 class="heading">
-    <span class="static">{{ t.section.hero.heading }} </span>
-    <br />
-    <span class="word">{{ t.section.hero.headingc }} </span>
-  </h1>
-  <p class="subtitle">
-    We make your move a
-    <span class="highlight">pleasant experience</span>
-  </p>
-  <a class="btn" href="#services">View services</a>
+  <div>
+    <h1 class="heading">
+      <span class="static">{{ t.section.hero.heading }}</span>
+      <br />
+      <span class="highlight">{{ t.section.hero.highlight }} </span>
+    </h1>
+    <!-- 
+    <p class="subtitle">{{ t.section.hero.subtitle }}</p>
+    <a class="cta-btn"><p>{{ t.section.hero.cta }}</p> </a> 
+    -->
+  </div>
+
+  <div class="container-hero-img">
+    <img class="opt" src="../assets/images/img-11.jpg" alt="" />
+    <img class="opt" src="../assets/images/img-7.webp" alt="" />
+  </div>
+
+  <!-- <div class="scroll-btn">
+    <span>scroll</span>
+    <img src="assets/images/icons/arrow-quote.svg" />
+  </div> -->
 </section>
+<!-- End of hero section -->
 
 <!-- Start company section -->
 <section id="company" class="company-section">
-  <!-- <div class="company-img">
-          <img src="../images/company.png" alt="Company" />
-        </div> -->
-  <div class="eyebrow">About us</div>
-  <h2 class="reveal-type">Over ten years of simplifying removals.</h2>
-  <p class="reveal-type">
-    We ensure that every move is efficient, safe and stress-free, always
-    adapting to the specific needs of our customers.
-  </p>
-  <p class="reveal-type">
-    The trust and satisfaction of those who have placed their confidence in us
-    reflect our unwavering commitment to excellence in everything we do.
-  </p>
+  <div class="eyebrow reveal-type">{{ t.section.company.label }}</div>
+  <h2 class="reveal-type">{{ t.section.company.heading }}</h2>
+  <p class="reveal-type">{{ t.section.company.goalone }}</p>
+  <br />
+  <p class="reveal-type">{{ t.section.company.goaltwo }}</p>
+  <a class="cta-btn reveal-type"
+    ><svg
+      class="arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 17L17 7M17 7H8M17 7V16"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+
+    <p>{{ t.section.company.cta }}</p>
+  </a>
 </section>
-<!-- End of hero section -->
+<!-- End of company section -->
+
 <section id="galery" class="galery-section">
-  <div class="eyebrow">Our work</div>
-  <h2>Professional managed relocation.</h2>
-  <div class="overlay"></div>
+  <div class="eyebrow">{{ t.section.galery.label }}</div>
+  <h2>{{ t.section.galery.heading }}</h2>
   <div id="galery-grid" class="grid">
-    <!-- Distribución exacta de 20 ítems para 3 y 4 columnas sin dejar espacios -->
     <div class="item small">
       <img src="assets/images/img-1.webp" alt="" />
     </div>
@@ -57,10 +79,9 @@ pageKey: home
 <!-- End company section -->
 <!-- Start testimonial section -->
 <section class="testimonials-section" id="testimonials">
-  <div class="eyebrow">Testimonials</div>
-  <h2>Your satisfaction is our mission</h2>
+  <div class="eyebrow">{{ t.section.testimonials.label }}</div>
+  <h2>{{ t.section.testimonails.heading }}</h2>
   <div class="testimonials__pin">
-    <!-- Track horizontal (cards) -->
     <div class="t-track-wrap">
       <div class="t-track" id="tTrack">
         <!-- Card 1 -->
@@ -147,12 +168,11 @@ pageKey: home
     </div>
   </div>
 </section>
-
 <!-- End testimonials section-->
 <!-- Start services section -->
 <section id="services" class="services-section">
-  <div class="eyebrow">Our services</div>
-  <h2>Tailored to you, designed for you</h2>
+  <div class="eyebrow">{{ t.section.services.label }}</div>
+  <h2>{{ t.section.services.heading }}</h2>
   <div id="services-cards" class="services-cards">
     <div id="first-service" class="service-card">
       <p class="service-card__title">Furniture lift hire.</p>

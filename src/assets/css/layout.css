@@ -6,7 +6,6 @@ Layout of main
 main {
   display: flex;
   flex-direction: column;
-  gap: 12rem;
 }
 
 /*
@@ -17,6 +16,7 @@ Layout of sections
 .hero-section,
 .company-section,
 .galery-section,
+.testimonials-section,
 .services-section,
 .contact-section {
   display: flex;
@@ -40,6 +40,7 @@ Space top between top sections and h2
   .company-section,
   .galery-section,
   .services-section,
+  .testimonials-section,
   .contact-section {
     padding-right: 24px;
     padding-left: 24px;

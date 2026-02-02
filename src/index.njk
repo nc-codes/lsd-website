@@ -4,70 +4,158 @@ lang: fr
 pageKey: home
 ---
 
+{% set t = i18n[lang] %}
+
 <!-- Start Hero section -->
 <section id="hero" class="hero-section">
-  <div>
-    <h1 class="heading">
-      <span class="static"> L'art de déménager, </span>
-      <br />
-      <span class="word"> Sans Stress.</span>
-    </h1>
-    <p class="subtitle">
-      Nous faisons de votre déménagement une
-      <span class="highlight">expérience agréable.</span>
-    </p>
-    <a class="cta-btn" href="#services"
-      >Voir les services
-      <img src="assets/images/icons/arrow.svg" />
-    </a>
-  </div>
-  <div class="hero-media">
-    <div class="panel">
-      <img src="assets/images/hero.png" />
+  <div class="networks">
+    <div class="social">
+      <a
+        href="https://www.tiktok.com/@nunezassocies"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Tik Tok</a
+      >
+      <a href="https://wa.link/c4viwy" rel="noopener noreferrer" target="_blank"
+        >Whatsapp</a
+      >
+      <a
+        href="https://www.instagram.com/nunezassocies/"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Instagram</a
+      >
+    </div>
+    <div class="language">
+      <svg class="vertical-line" viewBox="0 0 1 100" preserveAspectRatio="none">
+        <line
+          x1="0.5"
+          y1="0"
+          x2="0.5"
+          y2="100"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+      </svg>
+      <p>FR</p>
     </div>
   </div>
-  <div class="scroll-btn">
+
+  <div class="copy">
+    <h1 class="heading">
+      <span class="static">Elevamos</span>
+      <br />
+      <span class="highlight"> tus muebles </span>
+      <span class="comma">,</span>
+    </h1>
+    <h2 class="sub-heading">No tu estrés.</h2>
+    <!-- <div class="assets">
+      <div class="bottom-content">
+        <a class="cta-btn"
+          ><svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 17L17 7M17 7H8M17 7V16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <p>{{ t.section.hero.cta }}</p>
+        </a>
+      </div>
+    </div> -->
+  </div>
+  <a class="cta-btn cta-hero">
+    <p>Contáctanos</p>
+    <svg
+      class="arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 17L17 7M17 7H8M17 7V16"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </a>
+
+  <!-- <div class="scroll-btn">
+    <span>scroll</span>
     <img src="assets/images/icons/arrow-quote.svg" />
+  </div> -->
+
+  <div class="container-hero-img">
+    <!--
+        <img class="opt" src="assets/images/img-11.jpg" alt="" />
+        <img class="opt" src="assets/images/img-7.webp" alt="" />
+        -->
   </div>
 </section>
+<!-- End of hero section -->
 
 <!-- Start company section -->
 <section id="company" class="company-section">
-  <!-- <div class="company-img">
-          <img src="../images/company.png" alt="Company" />
-        </div> -->
-  <div class="eyebrow">À propos de nous</div>
-  <h2 class="reveal-type">Plus de dix ans à simplifier le déménagement.</h2>
-  <p class="reveal-type">
-    Nous veillons à ce que chaque déménagement soit efficace, sûr et sans
-    stress, en nous adaptant toujours aux besoins spécifiques de nos clients.
-  </p>
-  <p class="reveal-type">
-    La confiance et la satisfaction de ceux qui nous ont fait confiance sont le
-    reflet de notre engagement inébranlable en faveur de l'excellence dans
-    toutes les actions que nous entreprenons.
-  </p>
-</section>
-<!-- End of hero section -->
-<section id="galery" class="galery-section">
-  <div class="eyebrow">Notre travail</div>
-  <h2>Déménagement géré par des professionnels.</h2>
-  <div class="overlay"></div>
-  <div id="galery-grid" class="grid">
-    <!-- Distribución exacta de 20 ítems para 3 y 4 columnas sin dejar espacios -->
-    <div class="item small">
-      <img src="assets/images/img-1.webp" alt="" />
-    </div>
-    <div class="item">
-      <img src="assets/images/img-2.webp" alt="" />
-    </div>
-
-    <div class="item">
-      <img src="assets/images/img-4.webp" alt="" />
-    </div>
-  </div>
+  <div class="eyebrow reveal-type">{{ t.section.company.label }}</div>
+  <h2 class="reveal-type">{{ t.section.company.heading }}</h2>
+  <p class="reveal-type">{{ t.section.company.goalone }}</p>
+  <br />
+  <p class="reveal-type">{{ t.section.company.goaltwo }}</p>
+  <a class="cta-btn cta-company reveal-type">
+    <p>Savoir mais</p>
+    <svg
+      class="arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 17L17 7M17 7H8M17 7V16"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </a>
 </section>
 <!-- End company section -->
+
+<!-- Start galery section -->
+
+<section class="galery-section">
+  <div class="row row-top">
+    <div class="card"><img src="assets/images/img-1.webp" alt="" /></div>
+    <div class="card">
+      <img src="assets/images/buttom-two-medium.webp" alt="" />
+    </div>
+    <div class="card"><img src="assets/images/img-13.webp" alt="" /></div>
+    <div class="card"><img src="assets/images/img-13.webp" alt="" /></div>
+  </div>
+
+  <!-- <div class="center-text">
+      <div class="eyebrow">Notre travail</div>
+      <h2>Déménagement géré par des professionnels.</h2>
+    </div> -->
+
+  <div class="row row-bottom">
+    <div class="card"><img src="assets/images/img-12.jpg" alt="" /></div>
+    <div class="card"><img src="assets/images/img-14.webp" alt="" /></div>
+    <div class="card"><img src="assets/images/img-14.webp" alt="" /></div>
+    <div class="card"><img src="assets/images/img-14.webp" alt="" /></div>
+  </div>
+</section>
+
 <!-- Start testimonial section -->
 <section class="testimonials-section" id="testimonials">
   <div class="eyebrow">Témoignages</div>

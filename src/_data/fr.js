@@ -27,8 +27,32 @@ export default {
   },
   section: {
     hero: {
-      heading: "The art of moving",
-      headingc: "without stress",
+      heading: "Nous élevons vos meubles.",
+      highlight: "Pas votre stress.",
+      subtitle:
+        "Depuis plus de 10 ans, nous faisons de votre déménagement une expérience agréable.",
+      cta: "Découvrir nos services",
+    },
+    company: {
+      label: "À propos de nous",
+      heading: "Plus de dix ans à simplifier le déménagement.",
+      goalone:
+        "Nous veillons à ce que chaque déménagementsoit efficace, sûr et sans stress, en nous adaptant toujours aux besoins spécifiques de nos clients.",
+      goaltwo:
+        "   La confiance et la satisfaction de ceux qui nous ont fait confiance sont le reflet de notre engagement inébranlable en faveur de l'excellence dans toutes les actions que nous entreprenons.",
+      cta: "Apprenez-en davantage sur nous",
+    },
+    galery: {
+      label: "Our work",
+      heading: "Professional managed relocation",
+    },
+    testimonials: {
+      label: "Testimonials",
+      heading: "Your satisfaction is our mission",
+    },
+    services: {
+      label: "Services",
+      heading: "Tailored to you, designed for you",
     },
   },
 };

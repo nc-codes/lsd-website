@@ -5,7 +5,7 @@ import ScrollSmoother from "gsap/ScrollSmoother";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
+  "(prefers-reduced-motion: reduce)",
 ).matches;
 
 if (prefersReducedMotion) {
@@ -28,6 +28,7 @@ window.addEventListener("load", async () => {
 
   ScrollTrigger.refresh();
 });
+
 /*
 ======================================================
 NAVBAR — Link animations
@@ -55,7 +56,7 @@ tl.to(
     scaleX: 0.8,
     x: -2,
   },
-  0
+  0,
 );
 
 tl.to(
@@ -66,7 +67,7 @@ tl.to(
     transformOrigin: "0% 0%",
     x: 2,
   },
-  0
+  0,
 );
 
 tl.to(
@@ -75,7 +76,7 @@ tl.to(
     rotation: 45,
     transformOrigin: "50% 50%",
   },
-  0
+  0,
 );
 
 tl.to(
@@ -86,7 +87,7 @@ tl.to(
     pointerEvents: "visible",
     ease: "power2.inOut",
   },
-  0
+  0,
 );
 
 tl.to(
@@ -96,7 +97,7 @@ tl.to(
     stagger: 0.05,
     ease: "power2.inOut",
   },
-  0.05
+  0.05,
 );
 
 menuBtn.addEventListener("click", () => {
@@ -113,42 +114,84 @@ Animations for text of hero section
 ====================================================== 
 */
 
-gsap.from(".logo", {
-  y: 60,
-  duration: 1.2,
-  ease: "power3.out",
-  stagger: 0.3,
-});
-
-gsap.from(".menu-btn", {
-  y: 60,
-  rotation: 10,
-  duration: 1.2,
-  ease: "power3.out",
-  stagger: 0.3,
-});
-
-gsap.from(".heading", {
-  y: 60,
-  duration: 1.2,
-  ease: "power3.out",
-});
-
-gsap.from(".subtitle", {
-  y: 40,
-  duration: 1,
-  ease: "power2.out",
-});
-
-gsap.from(".btn", {
-  y: 40,
-  duration: 1,
-  ease: "power2.out",
-});
-
 gsap.to(".scroll-btn", {
   yoyo: true,
   y: 10,
   repeat: -1,
   duration: 2.5,
 });
+
+// const tl2 = gsap.timeline({ delay: 0.4 });
+
+// tl2
+//   .fromTo(
+//     ".container-hero-img",
+//     {
+//       clipPath: "inset(50% 50% 50% 50%)",
+//     },
+//     {
+//       clipPath: "inset(0% 0% 0% 0%)",
+//       duration: 1.2,
+//       ease: "power3.out",
+//     },
+//   )
+//   .from(
+//     ".hero-text",
+//     {
+//       opacity: 0,
+//       y: 20,
+//       duration: 0.6,
+//     },
+//     "-=0.4",
+//   );
+
+/*
+====================================================== 
+Animations for text of company section
+====================================================== 
+*/
+
+gsap.fromTo(
+  ".reveal-type",
+  {
+    y: 60,
+  },
+  {
+    y: 0,
+    ease: "none", // CLAVE
+    scrollTrigger: {
+      trigger: ".company-section",
+      start: "top bottom", // cuando entra
+      end: "center center", // cuando llega a su lugar
+      scrub: true, // 🔥 scroll controla la animación
+    },
+  },
+);
+
+/*
+====================================================== 
+Animations for images of galery section
+====================================================== 
+*/
+
+// gsap.to(".row-top", {
+//   x: "-20%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".split-section",
+//     start: "top bottom",
+//     end: "45% center",
+//     scrub: true,
+//   },
+// });
+
+// gsap.to(".row-bottom", {
+//   x: "20%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".split-section",
+//     start: "top bottom",
+//     end: "45% center",
+//     scrub: true,
+//   },
+// });

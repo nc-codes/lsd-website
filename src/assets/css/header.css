@@ -5,13 +5,17 @@ Styles of header
 */
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
+
   align-items: center;
   width: 100%;
-  padding: 42px 24px;
-  z-index: 2;
+  padding: 48px 24px;
+  z-index: 100;
+  /* backdrop-filter: blur(4px); */
+  background: var(--bg-color);
 }
 
 header .logo {
@@ -23,7 +27,7 @@ header .logo {
 
 header .logo .brand {
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 header .nav-bar .nav__link {
@@ -57,12 +61,20 @@ header .networks img {
   background-color: var(--primary-color);
   opacity: 40%;
   width: 1px;
-  margin: 0 16px;
+  margin: 0 28px;
   align-self: center;
   height: 1.2rem;
   color: var(--primary-color);
 }
 
+header .nav-bar a {
+  color: var(--bg-color);
+  letter-spacing: 1px;
+}
+
+header .cta-header {
+  display: none;
+}
 /* End of styles of header */
 
 /*
@@ -100,12 +112,18 @@ Media queries ∫
 @media screen and (min-width: 992px) {
   .nav-bar {
     display: flex;
+    align-items: center;
   }
 
   .nav-bar a {
     font-size: var(--fs-p-sm);
-    margin-right: 1rem;
+    margin-right: 1.8rem;
     font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .nav-bar > a {
+    margin-right: 0;
   }
 
   .nav-bar .networks a {

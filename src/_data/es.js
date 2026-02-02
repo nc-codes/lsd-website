@@ -21,8 +21,31 @@ export default {
   },
   section: {
     hero: {
-      heading: "The art of moving",
-      headingc: "without stress",
+      heading: "Elevamos tus muebles.",
+      highlight: "No tu estrés.",
+      subtitle: "Hacemos de tu mudanza una experiencia placentera",
+      cta: "Ver servicios",
+    },
+    company: {
+      label: "Acerca de nosotros",
+      heading: "Más de diez años simplificando las mudanzas",
+      goalone:
+        "   Nos aseguramos de que cada traslado sea eficiente, seguro y sin estrés, adaptándonos siempre a las necesidades específicas de nuestros clientes.",
+      goaltwo:
+        "    La confianza y satisfacción de quienes han depositado su confianza en nosotros reflejan nuestro compromiso inquebrantable con la excelencia en todo lo que hacemos.",
+      cta: "Aprende más acerca de nosotros",
+    },
+    galery: {
+      label: "Nuestros trabajos",
+      heading: "Mudanza gestionada por profesionales",
+    },
+    testimonials: {
+      label: "Testimonios",
+      heading: "Tu satisfacción, nuestra misión",
+    },
+    services: {
+      label: "Servicios",
+      heading: "A tu medida, diseñado para ti.",
     },
   },
 };

@@ -13,6 +13,20 @@
 }
 
 @font-face {
+  font-family: "Cormorant-Garamond";
+  src: url("../fonts/CormorantGaramond-Italic.ttf") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.ttf") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-SemiBold.woff2") format("woff2");
   font-weight: 600;
@@ -20,8 +34,29 @@
 }
 
 @font-face {
+  font-family: "Cormorant-Garamond";
+  src: url("../fonts/CormorantGaramond-SemiBoldItalic.ttf") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-ExtraBold.ttf") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("../fonts/Syne-ExtraBold.ttf") format("woff2");
+  font-weight: 800;
   font-style: normal;
 }
