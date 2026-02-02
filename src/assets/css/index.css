@@ -5,6 +5,7 @@ Styles of hero section
 */
 
 .hero-section {
+  position: relative;
   padding: 0;
   /* padding-bottom: 1rem; */
   gap: 2rem;
