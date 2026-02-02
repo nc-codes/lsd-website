@@ -5,7 +5,6 @@ Styles of hero section
 */
 
 .hero-section {
-  position: relative;
   padding: 0;
   /* padding-bottom: 1rem; */
   gap: 2rem;
@@ -133,8 +132,8 @@ Styles of hero section
   width: 60%;
   height: clamp(24rem, 2rem, 20rem);
   position: absolute;
-  bottom: 0;
-  transform: translate(50%, 60%);
+  right: 24px;
+  transform: translateY(80%);
   /* opacity: 0.9; */
 
   /* mask-image: linear-gradient(black 40%, transparent); */
