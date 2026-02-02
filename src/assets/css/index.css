@@ -10,6 +10,7 @@ Styles of hero section
   gap: 2rem;
   flex-direction: column;
   margin-bottom: 15rem;
+  border: 1px solid red;
 }
 
 /* Networks*/
@@ -76,12 +77,13 @@ Styles of hero section
   width: 100%;
   padding: 0 24px;
   text-align: justify;
-  z-index: 2;
+  border: 1px solid red;
 }
 
 .hero-section .copy .heading {
   font-size: clamp(1.5rem, 2rem, 5rem);
-  padding-top: 100px;
+  padding-top: 5rem;
+  border: 1px solid black;
   text-transform: uppercase;
   line-height: 0.9;
   position: relative;
