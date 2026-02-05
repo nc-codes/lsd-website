@@ -207,6 +207,8 @@ Styles of testimonials section
   padding: 0 24px;
   height: auto;
   padding-top: 7.6rem;
+  overflow-x: hidden;
+  border: 1px solid red;
 }
 
 .t-track {
