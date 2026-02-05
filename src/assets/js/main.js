@@ -101,11 +101,31 @@ tl.to(
   0.05,
 );
 
+let scrollY = 0;
+const smoothWrapper = document.getElementById("smooth-wrapper");
+
+function openMenu() {
+  smoothWrapper.classList.add("scroll-locked");
+  scrollY = window.scrollY;
+  document.body.style.top = `-${scrollY}px`;
+
+  ScrollSmoother.get().paused(true);
+}
+
+function closeMenu() {
+  smoothWrapper.classList.remove("scroll-locked");
+  document.body.style.top = "";
+  window.scrollTo(0, scrollY);
+  ScrollSmoother.get().paused(false);
+}
+
 menuBtn.addEventListener("click", () => {
   if (tl.reversed()) {
     tl.play();
+    openMenu();
   } else {
     tl.reverse();
+    closeMenu();
   }
 });
 
