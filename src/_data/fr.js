@@ -27,11 +27,11 @@ export default {
   },
   section: {
     hero: {
-      heading: "Nous élevons vos meubles.",
+      heading: "Nous élevons vos meubles",
       highlight: "Pas votre stress.",
       subtitle:
         "Depuis plus de 10 ans, nous faisons de votre déménagement une expérience agréable.",
-      cta: "Découvrir nos services",
+      cta: "Contactez-nous",
     },
     company: {
       label: "À propos de nous",

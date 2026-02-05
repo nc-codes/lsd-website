@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "ArchivoBlack-Regular";
+  src: url("../fonts/ArchivoBlack-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -14,7 +21,7 @@
 
 @font-face {
   font-family: "Cormorant-Garamond";
-  src: url("../fonts/CormorantGaramond-Italic.ttf") format("woff2");
+  src: url("../fonts/CormorantGaramond-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -35,7 +42,7 @@
 
 @font-face {
   font-family: "Cormorant-Garamond";
-  src: url("../fonts/CormorantGaramond-SemiBoldItalic.ttf") format("woff2");
+  src: url("../fonts/CormorantGaramond-SemiBoldItalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
 }

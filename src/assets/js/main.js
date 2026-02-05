@@ -36,18 +36,18 @@ NAVBAR — Link animations
 */
 
 const menuBtn = document.querySelector(".menu-btn");
-let open = false;
 
 let tl = gsap.timeline({
   paused: true,
   reversed: true,
   duration: 0.2,
   ease: "power2.inOut",
-  onReverseComplete: () => {
-    menu.classList.add("hidden");
-  },
+  // onReverseComplete: () => {
+  //   menu.classList.add("hidden");
+  // },
 });
 
+/* Menu Icon Animation */
 tl.to(
   "#line-top",
   {
@@ -79,6 +79,7 @@ tl.to(
   0,
 );
 
+/* Menu Section Animation */
 tl.to(
   "#menu-section",
   {
@@ -121,6 +122,60 @@ gsap.to(".scroll-btn", {
   duration: 2.5,
 });
 
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 768px)", () => {
+  // gsap.set(".logo", { x: 50 });
+
+  // gsap.to(".logo", {
+  //   x: 0,
+  //   ease: "circ.out",
+  //   scrollTrigger: {
+  //     trigger: "#hero",
+  //     start: "92% top",
+  //     end: "bottom+=120 top",
+  //     scrub: true,
+  //   },
+  // });
+
+  ScrollTrigger.create({
+    trigger: ".container-hero-img",
+    start: "92% top",
+    ease: "power2.in",
+    onEnter: () => {
+      document.querySelector(".nav-bar").classList.add("is-outside-image");
+    },
+    onLeaveBack: () => {
+      document.querySelector(".nav-bar").classList.remove("is-outside-image");
+    },
+  });
+
+  // cleanup automático al salir del breakpoint
+  return () => {
+    ScrollTrigger.getAll().forEach((st) => st.kill());
+  };
+});
+
+// mm.add("(min-width: 1200px)", () => {
+//   gsap.set(".logo", { x: 50 });
+
+//   gsap.to(".logo", {
+//     x: 0,
+//     ease: "circ.out",
+//     scrollTrigger: {
+//       trigger: "#hero",
+//       start: "92% top",
+//       end: "bottom+=120 top",
+//       scrub: true,
+//     },
+//   });
+
+//   // cleanup automático al salir del breakpoint
+//   return () => {
+//     ScrollTrigger.getAll().forEach((st) => st.kill());
+//   };
+// });
+
 // const tl2 = gsap.timeline({ delay: 0.4 });
 
 // tl2
@@ -154,7 +209,7 @@ Animations for text of company section
 gsap.fromTo(
   ".reveal-type",
   {
-    y: 60,
+    y: 100,
   },
   {
     y: 0,

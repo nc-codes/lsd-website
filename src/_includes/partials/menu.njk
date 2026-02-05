@@ -1,18 +1,18 @@
 {% set currentLang = lang %} {% set currentPage = pageKey %}
-<section id="menu-section" class="menu-section opacity-0">
+<section id="menu-section" class="menu-section hidden">
   <ul class="menu-list">
     <li>
-      <a class="menu-link" href="{{ t.routes.services }}">{{
-        t.nav.services
-      }}</a>
+      <a class="menu-link" href="{{ t.routes.services }}"
+        >{{ t.nav.services }}</a
+      >
     </li>
     <li>
       <a class="menu-link" href="{{ t.routes.company }}">{{ t.nav.company }}</a>
     </li>
     <li>
-      <a class="menu-link" href="{{ t.routes.our_work }}">{{
-        t.nav.our_work
-      }}</a>
+      <a class="menu-link" href="{{ t.routes.our_work }}"
+        >{{ t.nav.our_work }}</a
+      >
     </li>
     <li>
       <a class="menu-link" href="{{ t.routes.faq }}">{{ t.nav.faq }}</a>

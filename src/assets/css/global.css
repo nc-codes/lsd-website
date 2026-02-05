@@ -151,7 +151,6 @@ p {
 Eyebrow of sections
 ====================================================== 
 */
-
 .eyebrow {
   color: var(--primary-color);
   text-transform: uppercase;
@@ -177,7 +176,6 @@ h2 {
 Paragraph of sections
 ====================================================== 
 */
-
 .services-section > p,
 .company-section > p,
 .testimonials-section > p,
@@ -193,6 +191,50 @@ Flex Class
 */
 .d-flex {
   display: flex;
+}
+
+/*
+====================================================== 
+Opacity Class
+====================================================== 
+*/
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
+====================================================== 
+Button Class
+====================================================== 
+*/
+.cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 1rem 1rem 1rem;
+  background-color: #4a4a4a;
+  height: min-content;
+  text-align: left;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.cta-btn img {
+  margin-left: 0.4rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cta-btn p {
+  color: #f5f3e5;
 }
 
 /*

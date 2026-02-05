@@ -5,147 +5,77 @@ Styles of hero section
 */
 
 .hero-section {
-  padding: 0;
-  /* padding-bottom: 1rem; */
-  gap: 2rem;
+  display: flex;
   flex-direction: column;
-  margin-bottom: 15rem;
+  z-index: 1;
+  position: relative;
 }
 
 /* Networks*/
 .hero-section .networks {
-  display: none; /*flex*/
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border-right: 1px solid rgba(39, 51, 75, 0.05);
-  height: 100vh;
-  padding-top: 80px;
-  width: 80px;
-  color: var(--color-heading);
+  display: none;
 }
+/* End Networks*/
 
-.language .line-wrapper {
-  pointer-events: none;
-  height: 10px;
-}
-
-.language {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.language p {
-  color: var(--primary-color);
-  opacity: 1;
-  font-size: 0.6rem;
-}
-
-.vertical-line {
-  height: 40px;
-}
-
-.hero-section .networks a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.hero-section .networks img {
-  width: 16px;
-  height: 16px;
-  filter: invert(1);
-}
-
-.social {
-  display: flex;
-  height: 60%;
-  justify-content: space-between;
-  writing-mode: sideways-lr;
-  text-transform: uppercase;
-  font-size: 0.6rem;
-  letter-spacing: 4px;
-  opacity: 0.4;
+.hero-section .hero-main {
+  padding: 0 var(--padding-sm) 0;
+  padding-top: 8rem;
+  padding-bottom: 16rem;
 }
 
 /* Copy */
 .hero-section .copy {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 0 24px;
-  text-align: justify;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-section .copy .heading {
-  font-size: clamp(1.5rem, 2rem, 5rem);
-  padding-top: 100px;
+  /* font-size: clamp(1rem, 0.9rem + 0.8vw, 1.4rem); */
+  font-size: clamp(3rem, 3.4rem + 2.4vw, 3.2rem);
   text-transform: uppercase;
+  position: relative;
+  font-family: "ArchivoBlack-Regular"; /* */
   line-height: 0.9;
-  position: relative;
-  font-family: "Syne";
-  line-height: 0.8;
-  transform: scale(1, 1.5);
+  /* letter-spacing: 0.02em; */
   width: 100%;
-  /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
-  /* color: var(--bg-body); */
-}
-
-.heading .static {
-  font-style: normal;
-  font-weight: 500;
-}
-
-.heading .highlight {
-  font-style: italic;
-  font-weight: 500;
-  position: relative;
+  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  margin: 0;
 }
 
 .heading .comma {
-  width: 4rem;
-  height: 4rem;
-  opacity: 0.15;
-}
-
-.comma svg {
-  fill: #27334b; /* tu color base */
+  opacity: 0.9;
 }
 
 .copy .sub-heading {
-  width: 100%;
-  margin-top: 3.2rem;
   font-size: 2.2em;
   text-align: left;
   font-family: "Cormorant-Garamond", Times, serif;
   width: 100%;
   font-weight: 600;
   font-style: italic;
-  /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
-  /* color: var(--bg-body); */
+  margin-top: 1rem;
 }
 
 .container-hero-img {
   /* flex: 1; */
-  width: 60%;
-  height: clamp(24rem, 2rem, 20rem);
   position: absolute;
+  bottom: 0;
+  transform: translateY(0%);
+  width: 60%;
+  height: 24rem;
   right: 24px;
-  transform: translateY(80%);
   /* opacity: 0.9; */
-
   /* mask-image: linear-gradient(black 40%, transparent); */
-
   border-top-left-radius: 4rem;
   border-end-end-radius: 4rem;
   object-fit: cover;
   background-image: url("../images/img-15.jpg");
-  background-position: top;
+  background-position: 20% 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(20%);
+  filter: grayscale(40%);
   /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
 }
 
@@ -157,10 +87,6 @@ Styles of hero section
   bottom: 10px;
 }
 
-.subtitle {
-  width: 70%;
-}
-
 .hero-section .images {
   width: 100%;
   height: 240px;
@@ -168,41 +94,11 @@ Styles of hero section
 
 .cta-hero {
   z-index: 2;
-  margin: 0 24px;
-  margin-top: 7rem;
-  width: 15rem;
+  margin-top: 8rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   justify-content: end;
   position: relative;
-}
-
-.cta-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 1rem 1rem 1rem;
-  background-color: #4a4a4a;
-  height: min-content;
-  text-align: left;
-  font-size: 0.8rem;
-
-  border-radius: 2px;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.cta-btn img {
-  margin-left: 0.4rem;
-  height: 0.7rem;
-  width: 0.7rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.cta-btn p {
-  color: #f5f3e5;
 }
 
 .scroll-btn {
@@ -218,7 +114,8 @@ Styles of company section
 */
 
 .company-section {
-  padding-top: 6rem;
+  padding-top: 7.6rem;
+  height: auto;
 }
 
 .company-section .cta-btn {
@@ -239,7 +136,6 @@ Styles of company section
   width: 15rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-
   position: relative;
 }
 
@@ -310,7 +206,7 @@ Styles of testimonials section
 .testimonials-section {
   padding: 0 24px;
   height: auto;
-  margin-bottom: 10rem;
+  padding-top: 7.6rem;
 }
 
 .t-track {
@@ -378,7 +274,8 @@ Styles of services section
 */
 
 .services-section {
-  margin-bottom: 8rem;
+  /* margin-bottom: 0rem; */
+  padding-top: 7.6rem;
 }
 .services-section .services-cards {
   margin-top: 32px;
@@ -502,6 +399,7 @@ Styles of contact section
 
 .contact-section {
   margin-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .contact-information {
@@ -593,11 +491,14 @@ footer p {
 Media Queries
 ====================================================== 
 */
+
+/*
 @media screen and (min-width: 576px) {
   .galery {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
+*/
 
 @media screen and (min-width: 768px) {
   /*
@@ -606,13 +507,140 @@ Media Queries
   ====================================================== 
   */
 
-  .hero-section h1 {
-    font-size: var(--fs-h1-xl);
+  .hero-section {
+    flex-direction: row;
+    margin-bottom: 6rem;
+    position: relative;
+  }
+
+  /* Networks */
+  .hero-section .networks {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-right: 1px solid rgba(39, 51, 75, 0.05);
+    min-height: 100vh;
+    width: 80px;
+    color: var(--color-heading);
+    cursor: pointer;
+  }
+
+  .language .line-wrapper {
+    pointer-events: none;
+    height: 10px;
+  }
+
+  .language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .networks .language a:hover {
+    background-color: var(--primary-color);
+  }
+
+  .networks .language .opt-lang {
+    display: none;
+  }
+
+  .language a {
+    color: var(--primary-color);
+    opacity: 1;
+    font-size: 0.6rem;
+    height: 20px;
+    width: 20px;
+  }
+
+  .vertical-line {
+    height: 40px;
+  }
+
+  .hero-section .networks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero-section .networks img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+  }
+
+  .social {
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+    writing-mode: sideways-lr;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    opacity: 0.4;
+  }
+
+  .container-hero-img {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+  }
+
+  .hero-section .cta-hero {
+    /* display: none; */
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+
+  .hero-section .hero-main {
+    padding-left: 1.7rem;
+    padding-top: 120px;
+  }
+
+  .hero-section .copy {
+  }
+
+  .hero-section .copy .heading {
+    height: auto;
+    position: static;
+    width: 60%;
+
+    margin: 0;
+    font-size: clamp(4rem, 4rem, 12rem);
+    max-width: 100%;
+    /* margin-bottom: 8rem; */
+    /* transform-origin: top center; */
+    z-index: 2;
+    border: 1px solid brown;
+  }
+
+  .hero-section .copy .sub-heading {
+    margin-top: 0;
+    font-size: 2.2em;
+    text-align: left;
+    height: auto;
+    font-family: "Cormorant-Garamond", Times, serif;
+    width: 100%;
+    font-weight: 600;
+    font-style: italic;
+    border: 1px solid black;
   }
 
   .hero-section > p {
     font-size: var(--fs-p-md);
     max-width: 100%;
+  }
+
+  .container-hero-img {
+    width: 50%;
   }
   /* End styles of hero section*/
 
@@ -754,14 +782,14 @@ Media Queries
 }
 
 @media screen and (min-width: 1200px) {
-  .company-section,
+  /* .company-section,
   .galery-section,
   .services-section,
   .testimonials-section,
   .contact-section {
     padding-right: 48px;
     padding-left: 48px;
-  }
+  } */
 
   .hero-section h1 {
     margin-bottom: 30px; /* Espacio abajo */

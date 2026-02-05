@@ -58,15 +58,8 @@
   opacity: 0;
 }
 
-@media screen and (min-width: 1200px) {
-  /*
-  ====================================================== 
-  Layout of sections
-  ====================================================== 
-  */
-
+@media screen and (min-width: 768px) {
   .menu-section {
-    padding-right: 48px;
-    padding-left: 48px;
+    display: none;
   }
 }

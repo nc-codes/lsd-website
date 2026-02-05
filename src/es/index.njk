@@ -8,28 +8,69 @@ pageKey: home
 
 <!-- Start Hero section -->
 <section id="hero" class="hero-section">
+  <div class="networks">
+    <div class="social">
+      <a
+        href="https://www.tiktok.com/@nunezassocies"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Tik Tok</a
+      >
+      <a href="https://wa.link/c4viwy" rel="noopener noreferrer" target="_blank"
+        >Whatsapp</a
+      >
+      <a
+        href="https://www.instagram.com/nunezassocies/"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Instagram</a
+      >
+    </div>
+    <div class="language">
+      <svg class="vertical-line" viewBox="0 0 1 100" preserveAspectRatio="none">
+        <line
+          x1="0.5"
+          y1="0"
+          x2="0.5"
+          y2="100"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+      </svg>
+      <p>FR</p>
+    </div>
+  </div>
+
   <div>
-    <h1 class="heading">
-      <span class="static">{{ t.section.hero.heading }}</span>
-      <br />
-      <span class="highlight">{{ t.section.hero.highlight }} </span>
-    </h1>
-    <!-- 
-    <p class="subtitle">{{ t.section.hero.subtitle }}</p>
-    <a class="cta-btn"><p>{{ t.section.hero.cta }}</p> </a> 
-    -->
+    <div class="copy">
+      <h1 class="heading">
+        <span class="static">{{ t.section.hero.heading}}</span>
+        <span class="comma">,</span>
+      </h1>
+      <h2 class="sub-heading">{{ t.section.hero.highlight}}</h2>
+    </div>
+    <a class="cta-btn cta-hero">
+      <p>{{ t.section.hero.cta}}</p>
+      <svg
+        class="arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 17L17 7M17 7H8M17 7V16"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
   </div>
 
-  <div class="container-hero-img">
-    <img class="opt" src="../assets/images/img-11.jpg" alt="" />
-    <img class="opt" src="../assets/images/img-7.webp" alt="" />
-  </div>
-
-  <!-- <div class="scroll-btn">
-    <span>scroll</span>
-    <img src="assets/images/icons/arrow-quote.svg" />
-  </div> -->
+  <div class="container-hero-img"></div>
 </section>
+<!-- End Hero section -->
 
 <!-- Start company section -->
 <section id="company" class="company-section">

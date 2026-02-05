@@ -27,10 +27,10 @@ export default {
   },
   section: {
     hero: {
-      heading: "We elevate your furniture.",
       highlight: "Not your stress.",
+      heading: "We elevate your furniture",
       subtitle: "We make your move a pleasant experience",
-      cta: "View services",
+      cta: "Contact us",
     },
     company: {
       label: "About us",
