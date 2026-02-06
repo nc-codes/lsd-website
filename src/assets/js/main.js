@@ -116,7 +116,6 @@ function closeMenu() {
   smoothWrapper.classList.remove("scroll-locked");
   document.body.style.top = "";
   window.scrollTo(0, scrollY);
-  ScrollSmoother.get().paused(false);
 }
 
 menuBtn.addEventListener("click", () => {
@@ -145,21 +144,21 @@ gsap.to(".scroll-btn", {
 const mm = gsap.matchMedia();
 
 mm.add("(min-width: 768px)", () => {
-  // gsap.set(".logo", { x: 50 });
+  gsap.set(".logo", { x: 30 });
 
-  // gsap.to(".logo", {
-  //   x: 0,
-  //   ease: "circ.out",
-  //   scrollTrigger: {
-  //     trigger: "#hero",
-  //     start: "92% top",
-  //     end: "bottom+=120 top",
-  //     scrub: true,
-  //   },
-  // });
+  gsap.to(".logo", {
+    x: 0,
+    ease: "circ.out",
+    scrollTrigger: {
+      trigger: "#hero",
+      start: "90% top",
+      end: "bottom+=20 top",
+      scrub: true,
+    },
+  });
 
   ScrollTrigger.create({
-    trigger: ".container-hero-img",
+    trigger: "#hero",
     start: "92% top",
     ease: "power2.in",
     onEnter: () => {
@@ -167,6 +166,16 @@ mm.add("(min-width: 768px)", () => {
     },
     onLeaveBack: () => {
       document.querySelector(".nav-bar").classList.remove("is-outside-image");
+    },
+  });
+
+  const tlIntr = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero-section",
+      start: "0%",
+      end: "100%",
+      pin: true,
+      pinSpacing: false,
     },
   });
 
@@ -270,3 +279,14 @@ Animations for images of galery section
 //     scrub: true,
 //   },
 // });
+
+const trigger = document.querySelector(".language");
+const targets = document.querySelectorAll(".opt-lang");
+
+trigger.addEventListener("mouseenter", () => {
+  targets.forEach((el) => el.classList.add("visible"));
+});
+
+trigger.addEventListener("mouseleave", () => {
+  targets.forEach((el) => el.classList.remove("visible"));
+});

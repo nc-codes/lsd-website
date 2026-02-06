@@ -21,7 +21,6 @@
 
 .contacts {
   font-size: var(--fs-p-sm);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
