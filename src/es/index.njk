@@ -8,7 +8,7 @@ pageKey: home
 
 <!-- Start Hero section -->
 <section id="hero" class="hero-section">
-  <div class="networks">
+  <!-- <div class="networks">
     <div class="language">
       <a>FR</a>
       <a class="opt-lang" href="/es">ES</a>
@@ -46,23 +46,25 @@ pageKey: home
         >
       </div>
     </div>
+  </div> -->
+  <!-- <div class="container-hero-img"></div> -->
+  <div class="copy">
+    <h1 class="heading">
+      <span>Nosotros</span>
+      <br />
+      <span class="highlight">Elevamos</span>
+      <!-- <div class="container-hero-img"></div> -->
+      <br />
+      <span>tus muebles</span>
+      <span class="comma">,</span>
+    </h1>
+    <!-- <h2 class="sub-heading">{{ t.section.hero.highlight}}</h2> -->
   </div>
-
-  <div class="hero-main">
-    <div class="copy">
-      <h1 class="heading">
-        <span>Nous</span>
-        <br />
-        <span>élevons</span>
-        <br />
-        <span>vos</span>
-        <br />
-        <span> meubles</span>
-        <span class="comma">,</span>
-      </h1>
-      <h2 class="sub-heading">{{ t.section.hero.highlight}}</h2>
-    </div>
-    <a class="cta-btn cta-hero">
+  <div class="scroll">
+    <p>Desliza para descubrir</p>
+    <div class="nav_spacer"></div>
+  </div>
+  <!-- <a class="cta-btn cta-hero">
       <p>{{ t.section.hero.cta}}</p>
       <svg
         class="arrow"
@@ -78,10 +80,7 @@ pageKey: home
           stroke-linejoin="round"
         />
       </svg>
-    </a>
-  </div>
-
-  <div class="container-hero-img"></div>
+    </a> -->
 </section>
 <!-- End of hero section -->
 
@@ -91,9 +90,9 @@ pageKey: home
   <h2 class="reveal-type">{{ t.section.company.heading }}</h2>
   <p class="reveal-type">{{ t.section.company.goalone }}</p>
   <br />
-  <p class="reveal-type">{{ t.section.company.goaltwo }}</p>
-  <a class="cta-btn reveal-type"
-    ><svg
+  <a class="cta-btn cta-company reveal-type">
+    <p>{{t.section.company.cta}}</p>
+    <svg
       class="arrow"
       viewBox="0 0 24 24"
       fill="none"
@@ -107,12 +106,12 @@ pageKey: home
         stroke-linejoin="round"
       />
     </svg>
-
-    <p>{{ t.section.company.cta }}</p>
   </a>
 </section>
+<!-- End company section -->
 
 <!-- End of hero section -->
+<!--
 <section id="galery" class="galery-section">
   <div class="eyebrow">{{ t.section.galery.label }}</div>
   <h2>{{ t.section.galery.heading }}</h2>
@@ -129,22 +128,23 @@ pageKey: home
     </div>
   </div>
 </section>
-
+-->
 <!-- End company section -->
 <!-- Start testimonial section -->
 <section class="testimonials-section" id="testimonials">
-  <div class="eyebrow">{{ t.section.testimonials.label }}</div>
-  <h2>{{ t.section.testimonails.heading }}</h2>
+  <div class="eyebrow">{{t.section.testimonials.label}}</div>
+  <h2>{{t.section.testimonials.heading}}</h2>
   <div class="testimonials__pin">
+    <!-- Track horizontal (cards) -->
     <div class="t-track-wrap">
       <div class="t-track" id="tTrack">
         <!-- Card 1 -->
         <article class="t-card">
           <div class="t-card__brand">Barclays — Rise</div>
           <p class="t-card__quote">
-            Very reliable company. Professional, attentive, punctual and
-            courteous staff. Easy communication via WhatsApp and email. I
-            recommend them!
+            Empresa muy seria. Personal profesional, atento, puntual y cortés.
+            Fácil comunicación a través de WhatsApp y correo electrónico. ¡Lo
+            recomiendo!
           </p>
           <div class="t-card__person">
             <img
@@ -153,7 +153,9 @@ pageKey: home
               alt=""
             />
             <div>
-              <strong>Moni Di Bratto</strong><br /><span>Google user</span>
+              <strong>Moni Di Bratto</strong><br /><span
+                >Utilisateur Google</span
+              >
             </div>
           </div>
         </article>
@@ -161,9 +163,9 @@ pageKey: home
         <article class="t-card">
           <div class="t-card__brand">Argyle</div>
           <p class="t-card__quote">
-            Punctual, organised, efficient and, as a bonus, friendly and
-            cheerful! What more could you ask for? Professionalism, friendliness
-            and efficiency. Highly recommended!
+            Puntual, organizado, eficaz y, además, simpático y sonriente. ¿Qué
+            más se puede pedir? Profesionalidad, amabilidad y eficacia.
+            ¡Recomendable!
           </p>
           <div class="t-card__person">
             <img
@@ -178,48 +180,23 @@ pageKey: home
             </div>
           </div>
         </article>
-        <!-- Card 3 -->
-        <article class="t-card">
-          <div class="t-card__brand">Stellar Security</div>
-          <p class="t-card__quote">
-            Very responsive and professional. Treated my goods with good care
-            and worked very quickly. They speak several languages. Absolutely
-            recommend.
-          </p>
-          <div class="t-card__person">
-            <img
-              class="t-card__avatar"
-              src="https://i.pravatar.cc/80?img=15"
-              alt=""
-            />
-            <div>
-              <strong>Luz Rey</strong><br /><span>Utilisateur Google</span>
-            </div>
-          </div>
-        </article>
-        <!-- Card 4 -->
-        <article class="t-card">
-          <div class="t-card__brand">Rollpark</div>
-          <p class="t-card__quote">
-            Very professional, they remind one about the appointment a day
-            before, communication is excellent and fast. They also help during
-            the move and are very friendly.
-          </p>
-          <div class="t-card__person">
-            <img
-              class="t-card__avatar"
-              src="https://i.pravatar.cc/80?img=5"
-              alt=""
-            />
-            <div>
-              <strong>Roberto Gelsomino</strong><br /><span
-                >Head of Growth</span
-              >
-            </div>
-          </div>
-        </article>
       </div>
     </div>
+
+    <!-- Outro centrado (aparece cuando ya pasaron las cards) -->
+    <!--           <div class="t-outro" id="tOutro">
+            <div class="t-outro__box">
+              <div class="t-outro__text">
+
+                <h3>¿Listo para crear algo que hable por ti?</h3>
+                <p>
+                  Hablemos de tu próximo proyecto y cómo podemos impulsarlo.
+                </p>
+              </div>
+
+              <a class="cta" href="#contacto">Book a spot →</a>
+            </div>
+          </div> -->
   </div>
 </section>
 <!-- End testimonials section-->
@@ -229,21 +206,21 @@ pageKey: home
   <h2>{{ t.section.services.heading }}</h2>
   <div id="services-cards" class="services-cards">
     <div id="first-service" class="service-card">
-      <p class="service-card__title">Furniture lift hire.</p>
-      <p class="service-card__desc">The effective solution for heavy loads.</p>
+      <p class="service-card__title">Alquiler de elevadores de muebles.</p>
+      <p class="service-card__desc">La solución eficaz para cargas pesadas.</p>
     </div>
     <div id="second-service" class="service-card">
-      <p class="service-card__title">Camions équipés + chauffeur</p>
-      <p class="service-card__desc">Pour un transport sûr et pratique.</p>
+      <p class="service-card__title">Camiones equipados + conductor</p>
+      <p class="service-card__desc">Para un transporte seguro y cómodo.</p>
     </div>
     <div id="third-service" class="service-card">
-      <p class="service-card__title">Customised removals.</p>
-      <p class="service-card__desc">Designed to suit your situation.</p>
+      <p class="service-card__title">Mudanzas personalizadas.</p>
+      <p class="service-card__desc">Diseñado para adaptarse a tu situación.</p>
     </div>
     <div class="service-card">
-      <p class="service-card__title">Moving supplies</p>
+      <p class="service-card__title">Materiales de mudanza</p>
       <p class="service-card__desc">
-        Boxes, straps and protective covers for home use.
+        Cajas, correas y fundas protectoras para uso doméstico.
       </p>
       <!-- <div class="icon fourth_service_icon"></div> -->
     </div>
@@ -252,55 +229,58 @@ pageKey: home
 <!-- End services section -->
 <!-- Start contact section -->
 <section id="contact" class="contact-section">
-  <div class="eyebrow">Contact</div>
-  <h2>Begin your move</h2>
+  <div class="eyebrow">{{ t.section.contact.label }}</div>
+  <h2>{{ t.section.contact.heading }}</h2>
   <div class="contact-information">
     <div>
-      <img src="assets/images/icons/phone.svg" alt="icône du téléphone" />
+      <img src="../assets/images/icons/phone.svg" alt="icône du téléphone" />
       <a
         class="detail"
         href="https://wa.link/c4viwy"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <p>Phone</p>
+        <p>Teléfono</p>
         <p>(+32) 479482771</p>
       </a>
     </div>
     <div>
-      <img src="assets/images/icons/mail.svg" alt="icône google" />
+      <img src="../assets/images/icons/mail.svg" alt="icône google" />
       <a class="detail" href="mailto:liftservice@gmail.com">
         <p>Email</p>
         <p>liftservicebel@gmail.com</p>
       </a>
     </div>
     <div>
-      <img src="assets/images/icons/location.svg" alt="icône de localisation" />
+      <img
+        src="../assets/images/icons/location.svg"
+        alt="icône de localisation"
+      />
       <a
         class="detail"
         href="https://rb.gy/q6apwy"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <p>Address</p>
+        <p>Dirección</p>
         <p>Av. Wielemans Ceuppens 158-1190 Forest</p>
       </a>
     </div>
   </div>
   <div class="social-networks">
-    <p>Follow us on</p>
+    <p>Síguenos en</p>
     <div>
       <a
         href="https://www.tiktok.com/@nunezassocies"
         rel="noopener noreferrer"
         target="_blank"
-        ><img src="assets/images/icons/tiktok.svg" alt="icône tiktok"
+        ><img src="../assets/images/icons/tiktok.svg" alt="icône tiktok"
       /></a>
       <a
         href="https://www.instagram.com/ivanliftservice/?utm_source=qr&igsh=bTQwaTBnYnBiZXY5"
         rel="noopener noreferrer"
         target="_blank"
-        ><img src="assets/images/icons/instagram4.svg" alt="icône instagram"
+        ><img src="../assets/images/icons/instagram4.svg" alt="icône instagram"
       /></a>
     </div>
   </div>

@@ -10,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 48px 24px;
+  padding: 48px var(--padding-sm);
   z-index: 2;
   height: 120px;
   /* backdrop-filter: blur(4px); */
@@ -47,13 +47,6 @@ Media queries
 ====================================================== 
 */
 @media screen and (min-width: 768px) {
-  header {
-    width: calc(100% - 164px);
-    transform: translateX(82px);
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   header .nav-bar,
   header .cta-header {
     display: flex;
@@ -66,13 +59,15 @@ Media queries
 
   header .nav-bar a {
     font-size: var(--fs-p-sm);
-    margin-right: 1.8rem;
+    margin-right: 1.4rem;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: white;
+
     /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
     backdrop-filter: blur(4px);
+  }
+
+  header .nav-bar .cta-header {
+    margin-right: 0;
   }
 
   header .nav-bar.is-outside-image a {
@@ -80,6 +75,7 @@ Media queries
     backdrop-filter: none;
   }
 
+  .networks a:last-child,
   .nav-bar li:last-child a {
     margin-right: 0;
   }
@@ -87,11 +83,40 @@ Media queries
   .menu-btn {
     display: none;
   }
+
+  header .networks {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .networks a {
+    width: 20px;
+  }
+
+  header .networks img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+  }
+
+  .nav_spacer {
+    background-color: var(--primary-color);
+    opacity: 0.2;
+    width: 1px;
+    margin: 0 1.4rem;
+    align-self: center;
+    height: 1.2rem;
+    color: var(--primary-color);
+  }
+
+  header .networks a {
+    margin-right: 0.4rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  /* header {
+  header {
     padding-left: 48px;
     padding-right: 48px;
-  } */
+  }
 }

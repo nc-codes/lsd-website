@@ -116,6 +116,7 @@ function closeMenu() {
   smoothWrapper.classList.remove("scroll-locked");
   document.body.style.top = "";
   window.scrollTo(0, scrollY);
+  ScrollSmoother.get().paused(false);
 }
 
 menuBtn.addEventListener("click", () => {
@@ -127,130 +128,6 @@ menuBtn.addEventListener("click", () => {
     closeMenu();
   }
 });
-
-/*
-====================================================== 
-Animations for text of hero section
-====================================================== 
-*/
-
-gsap.to(".scroll-btn", {
-  yoyo: true,
-  y: 10,
-  repeat: -1,
-  duration: 2.5,
-});
-
-const mm = gsap.matchMedia();
-
-mm.add("(min-width: 768px)", () => {
-  gsap.set(".logo", { x: 30 });
-
-  gsap.to(".logo", {
-    x: 0,
-    ease: "circ.out",
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "90% top",
-      end: "bottom+=20 top",
-      scrub: true,
-    },
-  });
-
-  ScrollTrigger.create({
-    trigger: "#hero",
-    start: "92% top",
-    ease: "power2.in",
-    onEnter: () => {
-      document.querySelector(".nav-bar").classList.add("is-outside-image");
-    },
-    onLeaveBack: () => {
-      document.querySelector(".nav-bar").classList.remove("is-outside-image");
-    },
-  });
-
-  const tlIntr = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".hero-section",
-      start: "0%",
-      end: "100%",
-      pin: true,
-      pinSpacing: false,
-    },
-  });
-
-  // cleanup automático al salir del breakpoint
-  return () => {
-    ScrollTrigger.getAll().forEach((st) => st.kill());
-  };
-});
-
-// mm.add("(min-width: 1200px)", () => {
-//   gsap.set(".logo", { x: 50 });
-
-//   gsap.to(".logo", {
-//     x: 0,
-//     ease: "circ.out",
-//     scrollTrigger: {
-//       trigger: "#hero",
-//       start: "92% top",
-//       end: "bottom+=120 top",
-//       scrub: true,
-//     },
-//   });
-
-//   // cleanup automático al salir del breakpoint
-//   return () => {
-//     ScrollTrigger.getAll().forEach((st) => st.kill());
-//   };
-// });
-
-// const tl2 = gsap.timeline({ delay: 0.4 });
-
-// tl2
-//   .fromTo(
-//     ".container-hero-img",
-//     {
-//       clipPath: "inset(50% 50% 50% 50%)",
-//     },
-//     {
-//       clipPath: "inset(0% 0% 0% 0%)",
-//       duration: 1.2,
-//       ease: "power3.out",
-//     },
-//   )
-//   .from(
-//     ".hero-text",
-//     {
-//       opacity: 0,
-//       y: 20,
-//       duration: 0.6,
-//     },
-//     "-=0.4",
-//   );
-
-/*
-====================================================== 
-Animations for text of company section
-====================================================== 
-*/
-
-gsap.fromTo(
-  ".reveal-type",
-  {
-    y: 100,
-  },
-  {
-    y: 0,
-    ease: "none", // CLAVE
-    scrollTrigger: {
-      trigger: ".company-section",
-      start: "top bottom", // cuando entra
-      end: "center center", // cuando llega a su lugar
-      scrub: true, // 🔥 scroll controla la animación
-    },
-  },
-);
 
 /*
 ====================================================== 
@@ -290,3 +167,99 @@ trigger.addEventListener("mouseenter", () => {
 trigger.addEventListener("mouseleave", () => {
   targets.forEach((el) => el.classList.remove("visible"));
 });
+
+const page = document.body.dataset.page;
+initHeaderAnimations(page);
+
+function initHeaderAnimations(page) {
+  gsap.killTweensOf("header");
+
+  switch (page) {
+    case "home":
+      gsap.to(".scroll-btn", {
+        yoyo: true,
+        y: 10,
+        repeat: -1,
+        duration: 2.5,
+      });
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.set(".logo", { x: 30 });
+
+        gsap.to(".logo", {
+          x: 0,
+          ease: "circ.out",
+          scrollTrigger: {
+            trigger: "#hero",
+            start: "90% top",
+            end: "bottom+=20 top",
+            scrub: true,
+          },
+        });
+
+        ScrollTrigger.create({
+          trigger: "#hero",
+          start: "92% top",
+          ease: "power2.in",
+          onEnter: () => {
+            document
+              .querySelector(".nav-bar")
+              .classList.add("is-outside-image");
+          },
+          onLeaveBack: () => {
+            document
+              .querySelector(".nav-bar")
+              .classList.remove("is-outside-image");
+          },
+        });
+
+        const tlIntr = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".hero-section",
+            start: "0%",
+            end: "100%",
+            pin: true,
+            pinSpacing: false,
+          },
+        });
+
+        // cleanup automático al salir del breakpoint
+        return () => {
+          ScrollTrigger.getAll().forEach((st) => st.kill());
+        };
+      });
+
+      /*
+====================================================== 
+Animations for text of company section
+====================================================== 
+*/
+
+      gsap.fromTo(
+        ".reveal-type",
+        {
+          y: 100,
+        },
+        {
+          y: 0,
+          ease: "none", // CLAVE
+          scrollTrigger: {
+            trigger: ".company-section",
+            start: "top bottom", // cuando entra
+            end: "center center", // cuando llega a su lugar
+            scrub: true, // 🔥 scroll controla la animación
+          },
+        },
+      );
+      break;
+
+    case "services":
+      gsap.to("header", {
+        backgroundColor: "#27334B",
+        duration: 0.3,
+      });
+      break;
+  }
+}

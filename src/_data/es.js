@@ -11,7 +11,7 @@ export default {
     services: "Servicios",
     company: "Compania",
     our_work: "Nuestro Trabajo",
-    faq: "FAQ",
+    faq: "FAQs",
   },
   pages: {
     home: {
@@ -33,7 +33,7 @@ export default {
         "   Nos aseguramos de que cada traslado sea eficiente, seguro y sin estrés, adaptándonos siempre a las necesidades específicas de nuestros clientes.",
       goaltwo:
         "    La confianza y satisfacción de quienes han depositado su confianza en nosotros reflejan nuestro compromiso inquebrantable con la excelencia en todo lo que hacemos.",
-      cta: "Aprende más acerca de nosotros",
+      cta: "Aprende más",
     },
     galery: {
       label: "Nuestros trabajos",
@@ -46,6 +46,10 @@ export default {
     services: {
       label: "Servicios",
       heading: "A tu medida, diseñado para ti.",
+    },
+    contact: {
+      label: "Contacto",
+      heading: "Comienza tu mudanza",
     },
   },
 };

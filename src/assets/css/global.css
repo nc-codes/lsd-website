@@ -215,7 +215,7 @@ Button Class
   gap: 1rem;
   justify-content: space-between;
   width: fit-content;
-  padding: 1rem 1rem 1rem;
+  padding: 0.6rem 0.5rem 0.6rem;
   background-color: #4a4a4a;
   height: min-content;
   text-align: left;

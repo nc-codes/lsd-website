@@ -11,7 +11,7 @@ export default {
     services: "Services",
     company: "Company",
     our_work: "Our Work",
-    faq: "FAQ",
+    faq: "FAQs",
   },
   pages: {
     home: {

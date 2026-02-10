@@ -17,6 +17,7 @@ Layout of sections
 .company-section,
 .galery-section,
 .testimonials-section,
+.galery-section,
 .services-section,
 .contact-section {
   display: flex;
@@ -44,8 +45,8 @@ Space top between top sections and h2
   .services-section,
   .testimonials-section,
   .contact-section {
-    padding-right: 82px;
-    padding-left: 82px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 }
 
@@ -55,12 +56,13 @@ Space top between top sections and h2
   Layout of sections
   ====================================================== 
   */
-  /* .hero-section,
+  .hero-section,
   .company-section,
   .galery-section,
+  .testimonials-section,
   .services-section,
   .contact-section {
     padding-right: 48px;
     padding-left: 48px;
-  }*/
+  }
 }
