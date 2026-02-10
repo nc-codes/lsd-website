@@ -34,7 +34,7 @@ Styles of hero section
   font-size: clamp(2rem, 0.8rem + 2vw, 4rem);
   /* text-transform: uppercase; */
   font-size: italic;
-  font-family: "Cormorant-Garamond", Times, serif;
+  font-family: "Cormorant Garamond", Times, serif;
   font-weight: 600;
   line-height: 0.9;
   /* letter-spacing: 0.02em; */
@@ -55,7 +55,7 @@ Styles of hero section
 .copy .sub-heading {
   font-size: 1em;
   text-align: left;
-  font-family: "Cormorant-Garamond", Times, serif;
+  font-family: "Cormorant Garamond", Times, serif;
   width: 100%;
   font-weight: 600;
   text-align: center;
@@ -67,7 +67,7 @@ Styles of hero section
 .copy .sub-heading-alt {
   font-size: 1em;
   text-align: left;
-  font-family: "Cormorant-Garamond", Times, serif;
+  font-family: "Cormorant Garamond", Times, serif;
   width: 100%;
   font-weight: 600;
   text-align: center;
@@ -103,7 +103,7 @@ Styles of hero section
 
 .scroll p {
   font-size: 1rem;
-  font-family: "Cormorant-Garamond";
+  font-family: "Cormorant Garamond";
   opacity: 0.5;
   margin-bottom: 1rem;
 }
@@ -645,7 +645,7 @@ Media Queries
     font-size: 2.2em;
     text-align: center;
     height: auto;
-    font-family: "Cormorant-Garamond", Times, serif;
+    font-family: "Cormorant Garamond", Times, serif;
     width: 100%;
     font-weight: 600;
     font-style: italic;
