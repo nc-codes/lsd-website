@@ -157,17 +157,6 @@ Animations for images of galery section
 //   },
 // });
 
-const trigger = document.querySelector(".language");
-const targets = document.querySelectorAll(".opt-lang");
-
-trigger.addEventListener("mouseenter", () => {
-  targets.forEach((el) => el.classList.add("visible"));
-});
-
-trigger.addEventListener("mouseleave", () => {
-  targets.forEach((el) => el.classList.remove("visible"));
-});
-
 const page = document.body.dataset.page;
 initHeaderAnimations(page);
 
@@ -176,12 +165,12 @@ function initHeaderAnimations(page) {
 
   switch (page) {
     case "home":
-      gsap.to(".scroll-btn", {
-        yoyo: true,
-        y: 10,
-        repeat: -1,
-        duration: 2.5,
-      });
+      // gsap.to(".scroll-btn", {
+      //   yoyo: true,
+      //   y: 10,
+      //   repeat: -1,
+      //   duration: 2.5,
+      // });
 
       const mm = gsap.matchMedia();
 
