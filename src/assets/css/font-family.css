@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("../fonts/Manrope-Medium.ttf") format("woff2");
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -56,14 +56,14 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("../fonts/Manrope-ExtraBold.ttf") format("woff2");
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Syne";
-  src: url("../fonts/Syne-ExtraBold.ttf") format("woff2");
+  src: url("../fonts/Syne-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
