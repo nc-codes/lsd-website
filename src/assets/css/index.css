@@ -36,11 +36,12 @@ Styles of hero section
   font-style: italic;
   font-family: "Cormorant Garamond", Times, serif;
   font-weight: 600;
-  line-height: 0.9;
+  line-height: 1;
   /* letter-spacing: 0.02em; */
   width: 100%;
   padding-top: 8rem;
-  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
   margin: 0; /*re-write h1*/
 }
 
@@ -102,10 +103,15 @@ Styles of hero section
 }
 
 .scroll p {
-  font-size: 1rem;
-  font-family: "Cormorant Garamond";
+  font-family: "Cormorant Garamond", Times, serif;
+  font-style: italic;
   opacity: 0.5;
   margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+
+  font-size: clamp(0.85rem, 0.8rem + 0.4vw, 1rem);
+
+  /* color: rgba(0, 0, 0, 0.5); */
 }
 
 .nav_spacer {
