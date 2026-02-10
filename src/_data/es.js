@@ -25,6 +25,7 @@ export default {
       highlight: "No tu estrés.",
       subtitle: "Hacemos de tu mudanza una experiencia placentera",
       cta: "Contáctanos",
+      cta_heading: "Solicitar presupuesto",
     },
     company: {
       label: "Acerca de nosotros",

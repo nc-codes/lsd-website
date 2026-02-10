@@ -28,7 +28,7 @@ export default {
   section: {
     hero: {
       heading: "Nous élevons vos meubles",
-      highlight: "pas votre stress.",
+      highlight: "pas votre stress",
       subtitle:
         "Depuis plus de 10 ans, nous faisons de votre déménagement une expérience agréable.",
       cta: "Contactez-nous",

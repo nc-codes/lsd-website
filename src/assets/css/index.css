@@ -26,31 +26,26 @@ Styles of hero section
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .hero-section .copy .heading {
   text-align: center;
   /* font-size: clamp(1rem, 0.9rem + 0.8vw, 1.4rem); */
-  font-size: clamp(2.4rem, 3.4rem + 2.4vw, 2.8rem);
-  text-transform: uppercase;
+  font-size: clamp(2rem, 0.8rem + 2vw, 4rem);
+  /* text-transform: uppercase; */
   font-size: italic;
   font-family: "Cormorant-Garamond", Times, serif;
   font-weight: 600;
   line-height: 0.9;
   /* letter-spacing: 0.02em; */
   width: 100%;
+  padding-top: 8rem;
   text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   margin: 0; /*re-write h1*/
 }
 
 .heading .highlight {
-  font-size: 5rem;
-  /* background: linear-gradient(135deg, #e8b6a3 0%, #d19a8a 50%, #b87d6e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  */
+  font-size: clamp(4rem, 3.4rem + 4vw, 5rem);
 }
 
 .heading .comma {
@@ -58,11 +53,24 @@ Styles of hero section
 }
 
 .copy .sub-heading {
-  font-size: 2.2em;
+  font-size: 1em;
   text-align: left;
   font-family: "Cormorant-Garamond", Times, serif;
   width: 100%;
   font-weight: 600;
+  text-align: center;
+  font-style: italic;
+  margin: 0; /*re-write h2*/
+  margin-top: 0.5rem;
+}
+
+.copy .sub-heading-alt {
+  font-size: 1em;
+  text-align: left;
+  font-family: "Cormorant-Garamond", Times, serif;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
   font-style: italic;
   margin: 0; /*re-write h2*/
   margin-top: 0.5rem;
@@ -76,26 +84,12 @@ Styles of hero section
   justify-content: end;
 }
 
-.container-hero-img {
-  /* opacity: 0.9; */
-  /* mask-image: linear-gradient(black 40%, transparent); */
-
-  object-fit: cover;
-  width: calc(100% - 42px);
-  top: 0;
-  left: 0;
-  background-image: url("../images/img-15.jpg");
-
-  background-position: 20% 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(40%);
-  height: 20svh;
-  z-index: -1;
-  margin: 0 auto;
-
-  aspect-ratio: 8 / 3;
-  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+.cta-heading {
+  margin-top: 4rem;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  justify-content: end;
 }
 
 .scroll {
@@ -133,9 +127,9 @@ Styles of hero section
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100%;
-  opacity: 0.12;
-  filter: blur(0.4px);
+  height: 60%;
+  opacity: 0.25;
+  /* filter: blur(0.4px); */
   z-index: -1;
 }
 .hero-bg::before {
@@ -673,6 +667,10 @@ Media Queries
   .hero-section > p {
     font-size: var(--fs-p-md);
     max-width: 100%;
+  }
+
+  .cta-heading {
+    display: none;
   }
 
   /* End styles of hero section*/

@@ -27,7 +27,7 @@ export default {
   },
   section: {
     hero: {
-      highlight: "Not your stress.",
+      highlight: "not your stress",
       heading: "We elevate your furniture",
       subtitle: "We make your move a pleasant experience",
       cta: "Contact us",

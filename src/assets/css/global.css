@@ -225,6 +225,31 @@ Button Class
   cursor: pointer;
 }
 
+.cta-btn-alt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 0.6rem 0.5rem 0.6rem;
+  border: 1px solid #4a4a4a;
+  height: min-content;
+  text-align: left;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.cta-btn-alt .arrow {
+  height: 18px;
+  width: 18px;
+}
+
+.cta-btn-alt p {
+  padding-left: 8px;
+}
+
 .cta-btn img {
   margin-left: 0.4rem;
   height: 0.7rem;
