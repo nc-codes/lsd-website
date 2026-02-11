@@ -12,7 +12,8 @@ header {
   width: 100%;
   padding: 48px var(--padding-sm);
   z-index: 2;
-  height: 120px;
+  height: 80px;
+  /* border: 1px solid black; */
   /* backdrop-filter: blur(4px); */
 }
 

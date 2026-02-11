@@ -7,26 +7,10 @@
 }
 
 @font-face {
-  font-family: "Archivo Black";
-  src: url("../fonts/ArchivoBlack-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../fonts/CormorantGaramond-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -47,14 +31,6 @@
 }
 
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../fonts/CormorantGaramond-SemiBoldItalic.woff2") format("woff2");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-Bold.woff2") format("woff2");
   font-weight: 700;
@@ -67,6 +43,30 @@
   src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("../fonts/ArchivoBlack-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
   font-display: swap;
 }
 

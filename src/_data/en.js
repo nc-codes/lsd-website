@@ -31,6 +31,7 @@ export default {
       heading: "We elevate your furniture",
       subtitle: "We make your move a pleasant experience",
       cta: "Contact us",
+      scroll: "Scroll to discover",
     },
     company: {
       label: "About us",

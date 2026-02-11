@@ -158,6 +158,7 @@ Eyebrow of sections
   font-size: 12px;
   margin-bottom: 12px;
   font-weight: 400;
+
   font-size: var(--fs-p-sm);
 }
 
@@ -167,6 +168,8 @@ H2 heading sections
 ====================================================== 
 */
 h2 {
+  font-family: "Cormorant Garamond", Times, serif;
+  font-weight: 600;
   font-size: var(--fs-h2-md);
   font-weight: 400;
 }

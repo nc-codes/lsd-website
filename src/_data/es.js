@@ -22,10 +22,11 @@ export default {
   section: {
     hero: {
       heading: "Elevamos tus muebles",
-      highlight: "No tu estrés.",
+      highlight: "no tu estrés",
       subtitle: "Hacemos de tu mudanza una experiencia placentera",
       cta: "Contáctanos",
       cta_heading: "Solicitar presupuesto",
+      scroll: "Desliza para descubrir",
     },
     company: {
       label: "Acerca de nosotros",
