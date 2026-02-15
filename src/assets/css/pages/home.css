@@ -5,17 +5,12 @@ Styles of hero section
 */
 
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
   position: relative;
   align-items: center;
   justify-content: center;
-  min-height: calc(100svh - 80px);
-  margin-top: 98px;
   gap: 2rem;
   padding-bottom: 4rem;
-  /* border: 1px solid red; */
+  min-height: 100svh;
 }
 
 /* Copy */
@@ -26,6 +21,7 @@ Styles of hero section
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 98px;
   /* border: 1px solid green; */
 }
 
@@ -34,7 +30,6 @@ Styles of hero section
   /* font-size: clamp(1rem, 0.9rem + 0.8vw, 1.4rem); */
   font-size: clamp(2rem, 0.8rem + 2vw, 4rem);
   /* font-size: clamp(1.8rem, 5cqw, 4rem); */
-  /* text-transform: uppercase; */
   font-style: italic;
   font-family: "Cormorant Garamond", Times, serif;
   font-weight: 600;
@@ -73,33 +68,57 @@ Styles of hero section
   justify-content: end;
 }
 
-.scroll {
+.hero-bottom {
   position: absolute;
   bottom: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  /* justify-content: space-between; */
+  width: calc(100% - 48px);
 }
 
-.scroll p {
+.hero-bottom p {
   font-family: "Cormorant Garamond", Times, serif;
   font-style: italic;
   opacity: 0.5;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
   font-size: clamp(0.85rem, 0.8rem + 0.4vw, 1rem);
-  /* color: rgba(0, 0, 0, 0.5); */
 }
 
 .nav_spacer {
   background-color: var(--primary-color);
   opacity: 0.2;
   width: 1px;
-  margin: 0 1.4rem;
   align-self: center;
   height: 1.2rem;
   color: var(--primary-color);
+}
+
+.language {
+  display: none;
+  gap: 0.4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.language p {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.down {
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-networks {
+  display: none;
 }
 
 .hero-bg {
@@ -110,8 +129,6 @@ Styles of hero section
   height: 40svh;
   /* aspect-ratio: 21 / 8.4; */
   aspect-ratio: 16 / 9;
-  /* filter: blur(0.4px); */
-  z-index: -1;
   /* border: 1px solid black; */
 }
 
@@ -123,87 +140,53 @@ Styles of hero section
   mix-blend-mode: color;
 }
 
-/*
-====================================================== 
-Styles of company section
-====================================================== 
-*/
-.company-section {
-  padding-top: 4rem;
+.t1 {
+  opacity: 1;
 }
 
-.company-section .cta-btn {
-  margin-top: 24px;
+.reveal-grid,
+.reveal-time {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  margin: 0 var(--padding-sm) 0;
+  text-align: center;
 }
 
-.cta-btn .arrow {
-  height: 18px;
-  width: 18px;
-  color: var(--bg-body);
-}
-
-.cta-btn p {
-  padding-left: 8px;
-}
-
-.cta-company {
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  position: relative;
-}
-
-.company-section h2 {
-  margin-bottom: 1rem;
-}
-
-.company-section > p {
-  max-width: 80%;
-  hyphens: auto;
-  text-align: justify;
-}
-/* End of styles of company section */
-
-/*
-====================================================== 
-Galery of hero section
-====================================================== 
-*/
-/**/
-
-/* ===== SECTION ===== */
-.galery-section {
-  padding-top: 8rem;
-  background: #f4f1e8;
+.grid {
   display: flex;
-  gap: 2rem;
+  position: absolute;
   flex-direction: column;
+  justify-content: space-around;
+  height: calc(100svh - 180px);
+  top: 50%;
+  transform: translateY(-46%);
+
+  align-items: center; /* Optional: vertically center items */
+  gap: 1rem; /* Optional: space between items */
+
+  /* Fixed dimensions */
+  max-width: 100%; /* Responsive */
 }
 
-/* ===== ROWS ===== */
-.row {
-  display: flex;
-  gap: 24px;
-  will-change: transform;
+.item {
+  opacity: 0;
+  flex: 1; /* All items grow equally */
+  height: 100%; /* Fill container height */
+  overflow: hidden; /* Hide overflow if image is too large */
 }
 
-.row img {
-  width: 180px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
+.item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover; /* Scale image to cover area while maintaining aspect ratio */
+  object-position: center; /* Center the image */
 }
 
-.row-top {
-  transform: translateX(-350px);
+.item.last-item img {
+  object-position: 50% 30%;
 }
-
-.row-bottom {
-  transform: translateX(40px);
-}
-
-/**/
-
-/* End styles of galery section*/
 
 /*
 ====================================================== 
@@ -213,7 +196,6 @@ Styles of testimonials section
 
 .testimonials-section {
   height: auto;
-  padding-top: 7.6rem;
   overflow-x: hidden;
 }
 
@@ -281,17 +263,12 @@ Styles of services section
 ====================================================== 
 */
 
-.services-section {
-  /* margin-bottom: 0rem; */
-  padding-top: 7.6rem;
-}
 .services-section .services-cards {
   margin-top: 32px;
   width: 100%;
   max-width: 100%;
   height: 100%;
   gap: 24px;
-  z-index: 4;
 }
 
 .services-cards .service-card:not(:first-child) {
@@ -313,7 +290,7 @@ Styles of services section
   color: var(--primary-color);
   font-size: var(--fs-p-md);
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .service-card .service-card__desc {
@@ -324,77 +301,11 @@ Styles of services section
   color: var(--color-heading);
   font-size: var(--fs-p-base);
   font-weight: 200;
+  margin-bottom: 1rem;
 }
 
-.service-card .icon {
-  position: absolute;
-  display: block;
-  width: 220px;
-  height: 220px;
-  /* border: 1px solid red; */
-  background-repeat: no-repeat;
-  background-position: center;
-  top: -20px;
-  right: 0.2vw;
-  opacity: 0; /* clave para no “gritar” */
-  z-index: 0;
-}
-
-.service-card .first_service_icon {
-  background-image: url("../images/icons/lifting.svg");
-  background-size: 200px;
-}
-
-.info-plus {
-  display: flex;
-  justify-content: space-between;
-  gap: 28px;
-}
-
-.service-card .service-1 {
-  aspect-ratio: 2 / 3;
-  width: 30vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../images/serv1.png");
-  z-index: 3;
-}
-
-.service-card .second_service_icon {
-  background-image: url("../images/icons/truck.svg");
-  background-size: 200px;
-}
-
-.service-card ul {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  font-size: var(--fs-p-base);
-  text-align: left;
-  width: 100%;
-  color: var(--primary-color);
-  font-size: var(--fs-p-base);
-  font-weight: 200;
-}
-
-.service-card .service-2 {
-  aspect-ratio: 2 / 3;
-  width: 30vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../images/serv1.png");
-  z-index: 3;
-}
-
-.service-card .third_service_icon {
-  background-image: url("../images/icons/packt.svg");
-  background-size: 200px;
-}
-
-.service-card .fourth_service_icon {
-  background-image: url("../images/icons/chair.svg");
-  background-size: 200px;
+.services-cards .service-card:last-child {
+  padding-bottom: 0;
 }
 
 /* End of styles of services section */
@@ -476,26 +387,6 @@ Styles of contact section
 
 /*
 ====================================================== 
-Styles of footer
-====================================================== 
-*/
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: #2d3436;
-}
-
-footer p {
-  color: #d3d3d3;
-  font-size: var(--fs-p-sm);
-}
-
-/*
-====================================================== 
 Media Queries
 ====================================================== 
 */
@@ -521,7 +412,7 @@ Media Queries
     height: 100vh;
     margin-top: 0;
     /* border: 1px solid red; */
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     gap: 3rem;
     padding-bottom: 5rem;
   }
@@ -567,21 +458,9 @@ Media Queries
     /* aspect-ratio: 21 / 8.4; */
     aspect-ratio: 4 / 3;
     /* filter: blur(0.4px); */
-    z-index: -1;
   }
 
   /* End styles of hero section*/
-
-  /*
-  ====================================================== 
-  Styles of company section
-  ====================================================== 
-  */
-  .company-section {
-    z-index: 1;
-    min-height: 100vh;
-    padding-top: 8rem;
-  }
 
   /*
   ====================================================== 
@@ -589,7 +468,7 @@ Media Queries
   ====================================================== 
   */
   .services-section .services-cards {
-    margin-top: 34px;
+    margin-top: 48px;
   }
 
   .services-section .services-cards {
@@ -671,32 +550,20 @@ Media Queries
     height: 30px;
   }
 
-  /* Galery section */
-
-  .grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    --row: 190px;
-  }
-
   /* End of styles of contact section*/
 }
 
 @media screen and (min-width: 992px) {
+  .grid {
+    flex-direction: row;
+  }
   /* Styles of service section */
   .services-section .services-cards {
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
 
-  .service-card .service-card__desc {
+  .service-card {
     width: 70%;
-    margin-bottom: 78px;
-  }
-
-  .service-card .icon {
-    width: 140px;
-    height: 100px;
-    top: -78px;
-    right: 16px;
   }
 
   .service-card .first_service_icon {

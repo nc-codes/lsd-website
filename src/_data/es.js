@@ -30,7 +30,7 @@ export default {
     },
     company: {
       label: "Acerca de nosotros",
-      heading: "Más de diez años simplificando las mudanzas",
+      heading: "Llevamos más de diez años simplificando mudanzas",
       goalone:
         "   Nos aseguramos de que cada traslado sea eficiente, seguro y sin estrés, adaptándonos siempre a las necesidades específicas de nuestros clientes.",
       goaltwo:

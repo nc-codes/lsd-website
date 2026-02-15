@@ -6,6 +6,7 @@ Layout of main
 main {
   display: flex;
   flex-direction: column;
+  gap: 8rem;
 }
 
 /*
@@ -14,17 +15,16 @@ Layout of sections
 ====================================================== 
 */
 
-.company-section,
-.galery-section,
-.testimonials-section,
-.galery-section,
+.hero-section,
 .services-section,
-.contact-section {
+.testimonials-section,
+.contact-section,
+.galery-section,
+.company-section {
   display: flex;
   flex-direction: column;
   padding: 0 var(--padding-sm) 0;
   background-color: var(--bg-body);
-  z-index: 2;
 }
 
 /*
@@ -40,11 +40,12 @@ Space top between top sections and h2
   ====================================================== 
   */
 
-  .company-section,
-  .galery-section,
+  .hero-section,
   .services-section,
   .testimonials-section,
-  .contact-section {
+  .contact-section,
+  .galery-section,
+  .company-section {
     padding-right: 24px;
     padding-left: 24px;
   }
@@ -57,11 +58,11 @@ Space top between top sections and h2
   ====================================================== 
   */
   .hero-section,
-  .company-section,
-  .galery-section,
   .testimonials-section,
   .services-section,
-  .contact-section {
+  .contact-section,
+  .galery-section,
+  .company-section {
     padding-right: 48px;
     padding-left: 48px;
   }

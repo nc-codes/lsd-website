@@ -88,26 +88,9 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-html {
-  scrollbar-width: none; /* Firefox */
-}
-
-html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
-
 html,
 body {
   height: 100%;
-}
-
-#smooth-wrapper {
-  overflow: hidden;
-  height: 100vh;
-}
-
-#smooth-content {
-  will-change: transform;
 }
 
 ul {
@@ -215,7 +198,7 @@ Button Class
 .cta-btn {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.4rem;
   justify-content: space-between;
   width: fit-content;
   padding: 0.6rem 0.5rem 0.6rem;
@@ -244,9 +227,15 @@ Button Class
   cursor: pointer;
 }
 
+.cta-btn .arrow,
 .cta-btn-alt .arrow {
   height: 18px;
   width: 18px;
+  color: var(--bg-body);
+}
+
+.cta-btn-alt .arrow {
+  color: var(--primary-color);
 }
 
 .cta-btn-alt p {

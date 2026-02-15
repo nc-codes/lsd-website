@@ -35,7 +35,7 @@ export default {
     },
     company: {
       label: "À propos de nous",
-      heading: "Plus de dix ans à simplifier le déménagement.",
+      heading: "Nous simplifions les déménagements depuis plus de dix ans.",
       goalone:
         "Nous veillons à ce que chaque déménagementsoit efficace, sûr et sans stress, en nous adaptant toujours aux besoins spécifiques de nos clients.",
       goaltwo:
@@ -51,7 +51,7 @@ export default {
       heading: "Your satisfaction is our mission",
     },
     services: {
-      label: "Services",
+      label: "Servicesx",
       heading: "Tailored to you, designed for you",
     },
   },

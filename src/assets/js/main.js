@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
+import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -17,107 +18,225 @@ window.addEventListener("load", async () => {
   if (document.fonts?.ready) {
     await document.fonts.ready;
   }
-
-  const smoother = ScrollSmoother.create({
-    wrapper: "#smooth-wrapper",
-    content: "#smooth-content",
-    effects: true,
-    smooth: 1.2,
-    normalizeScroll: true,
-  });
-
-  ScrollTrigger.refresh();
 });
 
+// Initialize a new Lenis instance for smooth scrolling
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  orientation: "vertical", // or 'horizontal'
+  gestureOrientation: "vertical",
+  smoothWheel: true,
+  wheelMultiplier: 1,
+  touchMultiplier: 1,
+  autoRaf: false, // set to true if you don't want to use gsap.ticker
+});
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on("scroll", ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+const mm = gsap.matchMedia();
+
+mm.add(
+  {
+    isDesktop: "(min-width: 1024px)",
+    isTablet: "(min-width: 768px) and (max-width: 1023px)",
+    isMobile: "(max-width: 767px)",
+    isPortrait: "(orientation: portrait)",
+    prefersReducedMotion: "(prefers-reduced-motion: reduce)",
+  },
+  (context) => {
+    let { isDesktop, isTablet, isMobile, prefersReducedMotion } =
+      context.conditions;
+    let heroTL;
+    // Skip animations if user prefers reduced motion
+    if (prefersReducedMotion) {
+      return; // Exit early
+    }
+
+    // Desktop-only animation
+    if (isDesktop) {
+      gsap.to(".desktop-element", {
+        x: 500,
+        duration: 2,
+      });
+    }
+
+    // Tablet-only animation
+    if (isTablet) {
+    }
+
+    // Mobile-only animation
+    if (isMobile) {
+    }
+
+    heroTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "top top",
+        end: "+2000",
+        pin: true,
+        scrub: 1,
+        // markers: true,
+        pinSpacing: true,
+      },
+    });
+
+    heroTL.to(".t1", {
+      opacity: 0,
+      duration: 1,
+    });
+
+    heroTL.to(".reveal-time", {
+      opacity: 1,
+      duration: 1,
+    });
+
+    heroTL.to(".reveal-time", {
+      opacity: 0,
+      duration: 1,
+    });
+
+    heroTL.to(".reveal-grid", {
+      opacity: 1,
+      duration: 1,
+    });
+
+    heroTL.to(
+      ".item",
+      {
+        opacity: 1,
+        stagger: {
+          amount: 1,
+          from: "center",
+        },
+      },
+      "<",
+    );
+
+    // Animation for all screen sizes (but with different values)
+    gsap.to(".universal-element", {
+      x: isDesktop ? 300 : isMobile ? 100 : 200,
+      duration: isDesktop ? 2 : 1,
+      scrollTrigger: {
+        trigger: ".section",
+        start: "top center",
+        end: isDesktop ? "+=1000" : "+=500",
+      },
+    });
+
+    return () => {
+      heroTL.kill();
+    };
+  },
+);
+
 /*
-====================================================== 
-Animations for images of galery section
-====================================================== 
+======================================================
+NAVBAR — Link animations
+======================================================
 */
 
-// gsap.to(".row-top", {
-//   x: "-20%",
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".split-section",
-//     start: "top bottom",
-//     end: "45% center",
-//     scrub: true,
-//   },
-// });
+const menuBtn = document.querySelector(".menu-btn");
 
-// gsap.to(".row-bottom", {
-//   x: "20%",
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".split-section",
-//     start: "top bottom",
-//     end: "45% center",
-//     scrub: true,
-//   },
-// });
+let tl = gsap.timeline({
+  paused: true,
+  reversed: true,
+  duration: 0.2,
+  ease: "power2.inOut",
+  // onReverseComplete: () => {
+  //   menu.classList.add("hidden");
+  // },
+});
 
-// const page = document.body.dataset.page;
-// initHeaderAnimations(page);
+/* Menu Icon Animation */
+tl.to(
+  "#line-top",
+  {
+    rotation: -45,
+    transformOrigin: "100% 50%",
+    scaleX: 0.8,
+    x: -2,
+  },
+  0,
+);
 
-// function initHeaderAnimations(page) {
-//   gsap.killTweensOf("header");
+tl.to(
+  "#line-bottom",
+  {
+    rotation: -45,
+    scaleX: 0.8,
+    transformOrigin: "0% 0%",
+    x: 2,
+  },
+  0,
+);
 
-//   switch (page) {
-//     case "home":
-//       // gsap.to(".scroll-btn", {
-//       //   yoyo: true,
-//       //   y: 10,
-//       //   repeat: -1,
-//       //   duration: 2.5,
-//       // });
+tl.to(
+  "#line-middle",
+  {
+    rotation: 45,
+    transformOrigin: "50% 50%",
+  },
+  0,
+);
 
-//       const mm = gsap.matchMedia();
+/* Menu Section Animation */
+tl.to(
+  "#menu-section",
+  {
+    opacity: 1,
+    visibility: "visible",
+    pointerEvents: "visible",
+    ease: "power2.inOut",
+  },
+  0,
+);
 
-//       mm.add("(min-width: 768px)", () => {
-//         gsap.set(".logo", { x: 30 });
+tl.to(
+  ".menu-link",
+  {
+    opacity: 1,
+    stagger: 0.05,
+    ease: "power2.inOut",
+  },
+  0.05,
+);
 
-//         gsap.to(".logo", {
-//           x: 0,
-//           ease: "circ.out",
-//           scrollTrigger: {
-//             trigger: "#hero",
-//             start: "90% top",
-//             end: "bottom+=20 top",
-//             scrub: true,
-//           },
-//         });
+let scrollY = 0;
+const smoothWrapper = document.getElementById("smooth-wrapper");
 
-//         ScrollTrigger.create({
-//           trigger: "#hero",
-//           start: "92% top",
-//           ease: "power2.in",
-//           onEnter: () => {
-//             document
-//               .querySelector(".nav-bar")
-//               .classList.add("is-outside-image");
-//           },
-//           onLeaveBack: () => {
-//             document
-//               .querySelector(".nav-bar")
-//               .classList.remove("is-outside-image");
-//           },
-//         });
+function openMenu() {
+  smoothWrapper.classList.add("scroll-locked");
+  scrollY = window.scrollY;
+  document.body.style.top = `-${scrollY}px`;
 
-//         const tlIntr = gsap.timeline({
-//           scrollTrigger: {
-//             trigger: ".hero-section",
-//             start: "0%",
-//             end: "100%",
-//             pin: true,
-//             pinSpacing: false,
-//           },
-//         });
+  ScrollSmoother.get().paused(true);
+}
 
-//         // cleanup automático al salir del breakpoint
-//         return () => {
-//           ScrollTrigger.getAll().forEach((st) => st.kill());
-//         };
-//       });
+function closeMenu() {
+  smoothWrapper.classList.remove("scroll-locked");
+  document.body.style.top = "";
+  window.scrollTo(0, scrollY);
+  ScrollSmoother.get().paused(false);
+}
 
-//       /*
+menuBtn.addEventListener("click", () => {
+  if (tl.reversed()) {
+    tl.play();
+    openMenu();
+  } else {
+    tl.reverse();
+    closeMenu();
+  }
+});

@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 lang: fr
 pageKey: company
+stylesheet: company.css
 ---
 
 {% set t = i18n[lang] %}
@@ -9,23 +10,14 @@ pageKey: company
 <section id="company" class="company-section">
   <div class="eyebrow reveal-type">{{ t.section.company.label }}</div>
   <h2 class="reveal-type">{{ t.section.company.heading }}</h2>
+
   <p class="reveal-type">{{ t.section.company.goalone }}</p>
   <br />
-  <a class="cta-btn cta-company reveal-type">
-    <p>Savoir mais</p>
-    <svg
-      class="arrow"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7 17L17 7M17 7H8M17 7V16"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </a>
+  <p class="reveal-type">{{ t.section.company.goaltwo }}</p>
+  <br />
+  <img
+    src="/assets/images/company-2.jpeg"
+    alt="company image"
+    class="company-img"
+  />
 </section>
