@@ -9,6 +9,8 @@ export function initContact(ScrollTrigger) {
     _animateLeft(ScrollTrigger);
     _animateForm(ScrollTrigger);
     _handleSubmit(ScrollTrigger);
+
+    document.getElementById("year").textContent = new Date().getFullYear();
   });
 }
 

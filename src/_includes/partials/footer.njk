@@ -1,3 +1,71 @@
-<footer>
-  <p>© <span id="year"></span> - Núñez and Associés.</p>
+{% set t = i18n[lang] %}
+
+<footer class="site-footer" aria-label="Pied de page">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <!-- ── Brand ── -->
+      <div class="footer-brand">
+        <span class="brand">Lift Service</span><br />
+        Demenagement
+        <p class="footer-tagline">
+          Offrez-vous un déménagement fuide, sans stress, et en toute confiance.
+        </p>
+      </div>
+
+      <!-- ── Services ── -->
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a>{{ t.section.services.svc_1_lbl}}</a></li>
+          <li><a>{{ t.section.services.svc_2_lbl}}</a></li>
+          <li><a>{{ t.section.services.svc_3_lbl}}</a></li>
+          <li><a>{{ t.section.services.svc_4_lbl}}</a></li>
+        </ul>
+      </div>
+
+      <!-- ── Navigation ── -->
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#temoignages">Témoignages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- ── Contact ── -->
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-row">
+          <span class="footer-contact-label">Téléphone</span>
+          <span class="footer-contact-val">+32 (0) XXX XX XX</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-label">Email</span>
+          <span class="footer-contact-val">info@liftservice.be</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-label">Zone d'intervention</span>
+          <span class="footer-contact-val">Belgique · France · Europe</span>
+        </div>
+      </div>
+    </div>
+    <!-- /footer-top -->
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; <span id="year"></span>&nbsp;Lift Service Déménagement. Tous
+        droits réservés.
+      </p>
+      <ul class="footer-legal" aria-label="Liens légaux">
+        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+        <li><a href="/mentions-legales">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /footer-inner -->
 </footer>
