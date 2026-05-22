@@ -1476,26 +1476,7 @@ pageKey: home
           Expliquez-nous votre besoin, nous nous occupons du reste.
         </p>
 
-        <!--
-          Netlify form attributes:
-          - name="contact" → Netlify identifies this form
-          - netlify → enables Netlify Forms
-          - netlify-honeypot="bot-field" → spam protection
-        -->
-        <form
-          class="contact-form"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          id="contactForm"
-          novalidate
-        >
-          <!-- Honeypot (hidden from real users) -->
-          <p hidden>
-            <label>Ne pas remplir : <input name="bot-field" /></label>
-          </p>
-
+        <form class="contact-form" id="contactForm" novalidate>
           <!-- Row: name + email -->
           <div class="form-row">
             <div class="form-field">
@@ -1593,6 +1574,7 @@ pageKey: home
               <a href="/confidentialite">Politique de confidentialité</a>
             </span>
           </div>
+
           <button class="cta-btn cta-form" type="submit">
             <p>Envoyer le message</p>
             <svg

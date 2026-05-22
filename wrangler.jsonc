@@ -2,6 +2,7 @@
   "name": "lsd-website",
   // Set this to today's date
   "compatibility_date": "2026-05-08",
+  "pages_build_output_dir": "_site",
   "assets": {
     "directory": "./_site/",
     "not_found_handling": "404-page",
