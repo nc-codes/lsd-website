@@ -64,10 +64,6 @@ export default {
         "    La confianza y satisfacción de quienes han depositado su confianza en nosotros reflejan nuestro compromiso inquebrantable con la excelencia en todo lo que hacemos.",
       cta: "Aprende más",
     },
-    galery: {
-      label: "Nuestros trabajos",
-      heading: "Mudanza gestionada por profesionales",
-    },
     testimonials: {
       label: "Testimonios",
       heading: "Tu satisfacción es nuestra misión",
@@ -77,6 +73,20 @@ export default {
     contact: {
       label: "Contacto",
       heading: "Comienza tu mudanza",
+    },
+    footer: {
+      slogan:
+        "A tu disposición para asesorarte y acompañarte en cada paso de tu mudanza.",
+      services: "Servicios",
+      contact: "Contacto",
+      navigation: "Navegación",
+      phone: "Celular",
+      zone: "Área de operaciones",
+      zone_desc: "Bélgica · Francia · Europa",
+      disclaimer: "Lift Service Déménagement. Todos los derechos reservados.",
+      privacy_policy: "Política de privacidad",
+      cookie_policy: "Política de cookies",
+      mentions_legales: "Avisos legales",
     },
   },
 };

@@ -63,9 +63,19 @@ export default {
       heading: "Depuis plus de dix ans, nous facilitons votre déménagement.",
       cta: "Apprenez-en davantage sur nous",
     },
-    galery: {
-      label: "Our work",
-      heading: "Professional managed relocation",
+    footer: {
+      slogan:
+        "À ton écoute, pour te conseiller et t'accompagner à chaque étape de ton déménagement.",
+      services: "Services",
+      contact: "Contact",
+      navigation: "Navigation",
+      phone: "Téléphone",
+      zone: "Zone d'opération",
+      zone_desc: "Belgique · France · Europe",
+      disclaimer: "Lift Service Déménagement. Tous droits réservés.",
+      privacy_policy: "Politique de confidentialité",
+      cookie_policy: "Politique de cookies",
+      mentions_legales: "Mentions légales",
     },
   },
 };

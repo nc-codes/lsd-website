@@ -8,12 +8,7 @@ Styles of footer
   background-color: var(--color-bg-main);
   font-family: var(--font-secondary);
   border-top: 1px solid var(--line);
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--padding-sm);
+  padding: 0 var(--padding-sm) 0;
 }
 
 /* ── Top grid ────────────────────────────────────────────── */
@@ -186,7 +181,6 @@ Styles of footer
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
-    row-gap: 2.5rem;
   }
 
   /* Brand spans full width on tablet */
@@ -202,7 +196,6 @@ Styles of footer
 @media (max-width: 767px) {
   .footer-top {
     grid-template-columns: 1fr;
-    padding: 2.5rem 0 2rem;
   }
 
   .footer-bottom {
@@ -212,8 +205,8 @@ Styles of footer
   }
 }
 
-@media (min-width: 1200px) {
-  .footer-inner {
+@media screen and (min-width: 1200px) {
+  .site-footer {
     padding: 0 48px;
   }
 }

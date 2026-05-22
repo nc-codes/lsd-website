@@ -56,6 +56,35 @@ export default {
     services: {
       label: "Services",
       heading: "Tailored to you, designed for you",
+
+      svc_1_lbl: "Furniture Lift Rental",
+      svc_1_desc:
+        "Rental of motorized furniture lifts for heavy or bulky furniture and materials.",
+      svc_2_lbl: "Equipped Trucks + Driver",
+      svc_2_desc:
+        "Equipped trucks with experienced drivers for safe, practical and professional transportation.",
+      svc_3_lbl: "Custom Moves",
+      svc_3_desc:
+        "Full support from start to finish designed to adapt to your situation.",
+      svc_4_lbl: "Moving Materials",
+      svc_4_desc:
+        "Boxes, straps, bubble wrap and protections delivered to your home for secure packing of your belongings.",
+      question: "Ready to move?",
+      cta: "Request a quote",
+    },
+    footer: {
+      slogan:
+        "We're here to listen, advise, and support you every step of the way during your move.",
+      services: "Services",
+      contact: "Contact",
+      navigation: "Navigation",
+      phone: "Phone",
+      zone: "Operation Zone",
+      zone_desc: "Belgium · France · Europe",
+      disclaimer: "Lift Service Déménagement. Tous droits réservés.",
+      privacy_policy: "Privacy Policy",
+      cookie_policy: "Cookie Policy",
+      mentions_legales: "Legal Notices",
     },
   },
 };
