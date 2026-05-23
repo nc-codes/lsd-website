@@ -5,9 +5,9 @@
   "scripts": {
     "eleventy": "eleventy --serve",
     "vite": "vite",
-    "dev": "concurrently \"eleventy --serve\" \"vite\"",
+    "dev": "concurrently \"eleventy --serve\" \"vite\" \"wrangler pages dev _site\"",
     "build": "vite build && eleventy",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler pages deploy _site"
   },
   "keywords": [],
   "author": "",
