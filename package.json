@@ -5,7 +5,7 @@
   "scripts": {
     "eleventy": "eleventy --serve",
     "vite": "vite",
-    "dev": "concurrently \"eleventy --serve\" \"vite\" \"wrangler pages dev _site\"",
+    "dev": "concurrently \"eleventy --serve\" \"vite\"",
     "build": "vite build && eleventy",
     "deploy": "npm run build && wrangler pages deploy _site"
   },
