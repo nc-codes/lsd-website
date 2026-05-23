@@ -6,8 +6,7 @@
     "eleventy:dev": "eleventy --serve",
     "vite": "vite",
     "dev": "concurrently \"eleventy --watch\" \"vite\" \"wrangler pages dev _site\"",
-    "build": "vite build && eleventy",
-    "deploy": "wrangler pages deploy"
+    "build": "vite build && eleventy"
   },
   "keywords": [],
   "author": "",
