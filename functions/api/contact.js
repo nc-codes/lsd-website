@@ -11,7 +11,7 @@
  * Production: noreply@liftservicebel.com  (once domain is verified in Resend)
  */
 
-const RECIPIENT = "brystnc@gmail.com";
+const RECIPIENT = "liftservicebel@gmail.com";
 const FROM = "Lift Service <noreply@liftservicebel.com>";
 const RESEND_URL = "https://api.resend.com/emails";
 
