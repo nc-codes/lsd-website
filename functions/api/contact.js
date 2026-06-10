@@ -102,6 +102,12 @@ function sanitize(str) {
     .slice(0, 100);
 }
 
+function sanitizeLong(str) {
+  return String(str ?? "")
+    .replace(/[<>&"]/g, "")
+    .trim(); // ← no slice limit for messages
+}
+
 /* ── Email HTML template ─────────────────────────────────────── */
 function buildEmail({ sender_name, sender_email, service, message }) {
   const serviceLabel =
@@ -169,7 +175,7 @@ function buildEmail({ sender_name, sender_email, service, message }) {
                 <!-- Message -->
                 <p style="margin:0 0 8px;font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#b8a98a;">Message</p>
                 <div style="background:#f5f3e5;border-left:2px solid #b8a98a;padding:16px 20px;border-radius:1px;">
-                  <p style="margin:0;font-size:15px;line-height:1.75;color:#4e4e4e;white-space:pre-wrap;">${sanitize(message)}</p>
+                  <p style="margin:0;font-size:15px;line-height:1.75;color:#4e4e4e;white-space:pre-wrap;">${sanitizeLong(message)}</p>
                 </div>
 
                 <!-- CTA -->
