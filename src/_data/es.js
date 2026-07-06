@@ -4,6 +4,9 @@ export default {
     services: "/es/servicios",
     our_work: "/es/nuestro-trabajo",
     home: "/es/",
+    privacy_policy: "/es/politica-privacidad",
+    cookie_policy: "/es/politica-cookies",
+    mentions_legales: "/es/menciones-legales",
   },
   nav: {
     services: "Servicios",

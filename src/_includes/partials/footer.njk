@@ -22,6 +22,8 @@
       </div>
 
       <!-- ── Navigation ── -->
+
+      {% if pageKey %}
       <div>
         <p class="footer-col-title">{{ t.section.footer.navigation }}</p>
         <ul class="footer-links">
@@ -31,7 +33,7 @@
           <li><a href="#contact">{{ t.nav.contact }}</a></li>
         </ul>
       </div>
-
+      {% endif %}
       <!-- ── Contact ── -->
       <div>
         <p class="footer-col-title">{{ t.section.footer.contact }}</p>
@@ -62,11 +64,26 @@
       </p>
       <ul class="footer-legal" aria-label="Liens légaux">
         <li>
-          <a href="/confidentialite">{{ t.section.footer.privacy_policy }}</a>
+          <a
+            href="{{t.routes.privacy_policy}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t.section.footer.privacy_policy }}</a
+          >
         </li>
-        <li><a href="/cookies">{{ t.section.footer.cookie_policy }}</a></li>
         <li>
-          <a href="/mentions-legales"
+          <a
+            href="{{t.routes.cookie_policy}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t.section.footer.cookie_policy }}</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{t.routes.mentions_legales}}"
+            target="_blank"
+            rel="noopener noreferrer"
             >{{ t.section.footer.mentions_legales }}</a
           >
         </li>

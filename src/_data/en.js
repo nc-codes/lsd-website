@@ -4,6 +4,9 @@ export default {
     services: "/en/services",
     our_work: "/en/our-work",
     home: "/en/",
+    privacy_policy: "/en/privacy-policy",
+    cookie_policy: "/en/cookies-policy",
+    mentions_legales: "/en/legal-notices",
   },
   nav: {
     services: "Services",
@@ -83,7 +86,7 @@ export default {
       zone_desc: "Belgium · France · Europe",
       disclaimer: "Lift Service Déménagement. Tous droits réservés.",
       privacy_policy: "Privacy Policy",
-      cookie_policy: "Cookie Policy",
+      cookie_policy: "Cookies Policy",
       mentions_legales: "Legal Notices",
     },
   },

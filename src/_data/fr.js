@@ -3,6 +3,9 @@ export default {
   routes: {
     services: "/services",
     our_work: "/notre-travail",
+    privacy_policy: "/politique-confidentialite",
+    cookie_policy: "/politique-cookies",
+    mentions_legales: "/mentions-legales",
     home: "/",
   },
   nav: {
@@ -27,7 +30,7 @@ export default {
   section: {
     hero: {
       heading:
-        "Offrez-vous un déménagement fuide, sans stress, et en toute confiance.",
+        "Offrez-vous un déménagement fluide, sans stress, et en toute confiance.",
       subheading:
         " Monte-meubles, camions équipés et personnel qualifié pour vous faciliter la tâche.",
       year_experiencie_lbl: "ans d'expérience",
